@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  7 APR 2020 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  7 APR 2020 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,29 +373,29 @@ i-bu-tion at a
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
-<figure/v_lam_cent.png, id=23, 599.841pt x 418.26262pt>
+<figure/v_lam_cent.png, id=23, 724.50674pt x 589.0005pt>
 File: figure/v_lam_cent.png Graphic file (type png)
 <use figure/v_lam_cent.png>
 Package pdftex.def Info: figure/v_lam_cent.png  used on input line 200.
-(pdftex.def)             Requested size: 246.0pt x 171.53345pt.
-<figure/I_cent.png, id=24, 592.614pt x 416.45587pt>
+(pdftex.def)             Requested size: 246.0pt x 199.98788pt.
+<figure/I_cent.png, id=24, 555.57562pt x 423.68288pt>
 File: figure/I_cent.png Graphic file (type png)
 <use figure/I_cent.png>
 Package pdftex.def Info: figure/I_cent.png  used on input line 213.
-(pdftex.def)             Requested size: 246.0pt x 172.87044pt.
+(pdftex.def)             Requested size: 246.0pt x 187.59764pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <./figure/v_lam_cent.png>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 225.
+ on input line 223.
 
-<figure/comm_cent.png, id=36, 571.83638pt x 419.166pt>
+<figure/comm_cent.png, id=36, 579.06337pt x 419.166pt>
 File: figure/comm_cent.png Graphic file (type png)
 <use figure/comm_cent.png>
 Package pdftex.def Info: figure/comm_cent.png  used on input line 231.
-(pdftex.def)             Requested size: 246.0pt x 180.32101pt.
+(pdftex.def)             Requested size: 246.0pt x 178.07603pt.
 <figure/in_TE.png, id=37, 538.4115pt x 430.90988pt>
 File: figure/in_TE.png Graphic file (type png)
 <use figure/in_TE.png>
@@ -451,6 +451,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./paper1.bbl [4 <./figure/G_dG_t.png> <./figure/TE_dG.png> <./figure/TE_act_ti
 me.png> <./figure/mod_dG.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 10.
+
+
 Underfull \hbox (badness 2443) in paragraph at lines 102--108
  \OT1/cmr/m/n/9 Ex-per-i-ment \OT1/cmr/bx/n/9 2008\OT1/cmr/m/n/9 , 10.1088/1742
 -5468/2008/10/P10008
@@ -462,13 +467,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4617 strings out of 492616
- 61029 string characters out of 6129482
+ 4618 strings out of 492616
+ 61039 string characters out of 6129482
  144436 words of memory out of 5000000
- 8441 multiletter control sequences out of 15000+600000
+ 8442 multiletter control sequences out of 15000+600000
  17230 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,29p,347b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,29p,347b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -488,7 +493,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper1.pdf (5 pages, 804053 bytes).
+Output written on paper1.pdf (5 pages, 827787 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
