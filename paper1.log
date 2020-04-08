@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  8 APR 2020 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  8 APR 2020 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,16 +396,16 @@ File: figure/comm_cent.png Graphic file (type png)
 <use figure/comm_cent.png>
 Package pdftex.def Info: figure/comm_cent.png  used on input line 231.
 (pdftex.def)             Requested size: 246.0pt x 178.07603pt.
-<figure/in_TE.png, id=37, 538.4115pt x 430.90988pt>
+<figure/in_TE.png, id=37, 542.025pt x 423.68288pt>
 File: figure/in_TE.png Graphic file (type png)
 <use figure/in_TE.png>
 Package pdftex.def Info: figure/in_TE.png  used on input line 257.
-(pdftex.def)             Requested size: 246.0pt x 196.87962pt.
-<figure/out_TE.png, id=38, 538.4115pt x 430.90988pt>
+(pdftex.def)             Requested size: 246.0pt x 192.29114pt.
+<figure/out_TE.png, id=38, 542.025pt x 423.68288pt>
 File: figure/out_TE.png Graphic file (type png)
 <use figure/out_TE.png>
 Package pdftex.def Info: figure/out_TE.png  used on input line 264.
-(pdftex.def)             Requested size: 246.0pt x 196.87962pt.
+(pdftex.def)             Requested size: 246.0pt x 192.29114pt.
 
 Underfull \hbox (badness 2961) in paragraph at lines 271--272
  \OT1/cmr/m/it/10 c. Node Ac-tive In-for-ma-tion Stor-age[] \OT1/cmr/bx/n/10 No
@@ -449,53 +449,37 @@ Package pdftex.def Info: figure/dual_task.png  used on input line 326.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/guimera_t0.png, id=51, 616.10175pt x 373.09387pt>
-File: figure/guimera_t0.png Graphic file (type png)
-<use figure/guimera_t0.png>
-Package pdftex.def Info: figure/guimera_t0.png  used on input line 335.
-(pdftex.def)             Requested size: 246.0pt x 148.96733pt.
+<figure/guimera_combine.png, id=51, 657.657pt x 1240.33388pt>
+File: figure/guimera_combine.png Graphic file (type png)
+<use figure/guimera_combine.png>
+Package pdftex.def Info: figure/guimera_combine.png  used on input line 335.
+(pdftex.def)             Requested size: 246.0pt x 463.95065pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/guimera_t10.png, id=52, 616.10175pt x 373.09387pt>
-File: figure/guimera_t10.png Graphic file (type png)
-<use figure/guimera_t10.png>
-Package pdftex.def Info: figure/guimera_t10.png  used on input line 342.
-(pdftex.def)             Requested size: 246.0pt x 148.96733pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figure/guimera_t50.png, id=53, 577.25662pt x 373.09387pt>
-File: figure/guimera_t50.png Graphic file (type png)
-<use figure/guimera_t50.png>
-Package pdftex.def Info: figure/guimera_t50.png  used on input line 349.
-(pdftex.def)             Requested size: 246.0pt x 158.99261pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./paper1.bbl [4 <./figure/G_dG_t.png> <./figure/TE_dG.png> <./figure/TE_act_ti
-me.png> <./figure/mod_dG.png>]
+[4 <./figure/G_dG_t.png> <./figure/TE_dG.png> <./figure/TE_act_time.png> <./fig
+ure/mod_dG.png>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 10.
+ on input line 344.
 
-
+(./paper1.bbl
 Underfull \hbox (badness 2443) in paragraph at lines 102--108
  \OT1/cmr/m/n/9 Ex-per-i-ment \OT1/cmr/bx/n/9 2008\OT1/cmr/m/n/9 , 10.1088/1742
 -5468/2008/10/P10008
  []
 
-) [5 <./figure/dual_task.png> <./figure/guimera_t0.png>] [6 <./figure/guimera_t
-10.png> <./figure/guimera_t50.png>] (./paper1.aux)
+) [5 <./figure/dual_task.png>] [6 <./figure/guimera_combine.png>] (./paper1.aux
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4636 strings out of 492616
- 61450 string characters out of 6129482
- 144481 words of memory out of 5000000
- 8457 multiletter control sequences out of 15000+600000
+ 4624 strings out of 492616
+ 61202 string characters out of 6129482
+ 144451 words of memory out of 5000000
+ 8447 multiletter control sequences out of 15000+600000
  17230 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,29p,347b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -518,10 +502,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper1.pdf (6 pages, 922843 bytes).
+Output written on paper1.pdf (6 pages, 1014368 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
