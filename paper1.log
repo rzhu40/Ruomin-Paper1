@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  8 APR 2020 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  16 APR 2020 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -220,16 +220,26 @@ Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
 Class revtex4-2 Info: Unrecognized array package. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 58.
-Class revtex4-2 Info: Robustifying \LaTeX's \boldmath command on input line 58.
+lass! (Proceeding with fingers crossed.) on input line 59.
+Class revtex4-2 Info: Robustifying \LaTeX's \boldmath command on input line 59.
 
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 58.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 58.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 58.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 59.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 59.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 59.
  (./paper1.aux
 
 LaTeX Warning: Label `sec:level1' multiply defined.
+
+
+LaTeX Warning: Label `sec:level2' multiply defined.
+
+
+LaTeX Warning: Label `sec:level2' multiply defined.
 
 
 LaTeX Warning: Label `sec:level2' multiply defined.
@@ -255,18 +265,18 @@ LaTeX Warning: Label `sec:level1' multiply defined.
 )
 \openout1 = `paper1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
@@ -337,153 +347,145 @@ e
 
 Class revtex4-2 Warning: Assuming \noaffiliation for collaboration.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 110.
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 110.
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
 <figure/mpl_plot.png, id=1, 581.7735pt x 618.81187pt>
 File: figure/mpl_plot.png Graphic file (type png)
 <use figure/mpl_plot.png>
-Package pdftex.def Info: figure/mpl_plot.png  used on input line 123.
+Package pdftex.def Info: figure/mpl_plot.png  used on input line 124.
 (pdftex.def)             Requested size: 172.19925pt x 183.16167pt.
 <figure/graph_plot.png, id=3, 574.5465pt x 614.295pt>
 File: figure/graph_plot.png Graphic file (type png)
 <use figure/graph_plot.png>
-Package pdftex.def Info: figure/graph_plot.png  used on input line 130.
+Package pdftex.def Info: figure/graph_plot.png  used on input line 131.
 (pdftex.def)             Requested size: 196.80075pt x 210.41351pt.
- [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fi
-gure/mpl_plot.png> <./figure/graph_plot.png>]
-Underfull \hbox (badness 1033) in paragraph at lines 189--190
+
+Underfull \hbox (badness 1205) in paragraph at lines 137--138
+\OT1/cmr/m/n/10 net-works be-have like tra-di-tional elec-tri-cal net-works.
+ []
+
+[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fig
+ure/mpl_plot.png> <./figure/graph_plot.png>]
+LaTeX Font Info:    Try loading font information for U+bbold on input line 151.
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/bbold/Ubbold.fd)
+Underfull \hbox (badness 1033) in paragraph at lines 226--227
  \OT1/cmr/m/it/10 a. Volt-age dis-tri-bu-tion[] \OT1/cmr/m/n/10 Volt-age dis-tr
 i-bu-tion at a
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
-<figure/v_lam_cent.png, id=23, 724.50674pt x 589.0005pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 229.
+[2]
+<figure/v_lam_cent.png, id=34, 724.50674pt x 589.0005pt>
 File: figure/v_lam_cent.png Graphic file (type png)
 <use figure/v_lam_cent.png>
-Package pdftex.def Info: figure/v_lam_cent.png  used on input line 200.
+Package pdftex.def Info: figure/v_lam_cent.png  used on input line 237.
 (pdftex.def)             Requested size: 246.0pt x 199.98788pt.
-<figure/I_cent.png, id=24, 555.57562pt x 423.68288pt>
+<figure/I_cent.png, id=35, 555.57562pt x 423.68288pt>
 File: figure/I_cent.png Graphic file (type png)
 <use figure/I_cent.png>
-Package pdftex.def Info: figure/I_cent.png  used on input line 213.
+Package pdftex.def Info: figure/I_cent.png  used on input line 250.
 (pdftex.def)             Requested size: 246.0pt x 187.59764pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./figure/v_lam_cent.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 223.
-
-<figure/comm_cent.png, id=36, 579.06337pt x 419.166pt>
+<figure/comm_cent.png, id=36, 571.83638pt x 413.74574pt>
 File: figure/comm_cent.png Graphic file (type png)
 <use figure/comm_cent.png>
-Package pdftex.def Info: figure/comm_cent.png  used on input line 231.
-(pdftex.def)             Requested size: 246.0pt x 178.07603pt.
+Package pdftex.def Info: figure/comm_cent.png  used on input line 268.
+(pdftex.def)             Requested size: 246.0pt x 177.98927pt.
 <figure/in_TE.png, id=37, 542.025pt x 423.68288pt>
 File: figure/in_TE.png Graphic file (type png)
 <use figure/in_TE.png>
-Package pdftex.def Info: figure/in_TE.png  used on input line 257.
+Package pdftex.def Info: figure/in_TE.png  used on input line 294.
 (pdftex.def)             Requested size: 246.0pt x 192.29114pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <figure/out_TE.png, id=38, 542.025pt x 423.68288pt>
 File: figure/out_TE.png Graphic file (type png)
 <use figure/out_TE.png>
-Package pdftex.def Info: figure/out_TE.png  used on input line 264.
+Package pdftex.def Info: figure/out_TE.png  used on input line 301.
 (pdftex.def)             Requested size: 246.0pt x 192.29114pt.
 
-Underfull \hbox (badness 2961) in paragraph at lines 271--272
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 308--309
  \OT1/cmr/m/it/10 c. Node Ac-tive In-for-ma-tion Stor-age[] \OT1/cmr/bx/n/10 No
 t sure
  []
 
-[3 <./figure/I_cent.png> <./figure/comm_cent.png> <./figure/in_TE.png> <./figur
-e/out_TE.png>]
-<figure/G_dG_t.png, id=46, 644.10637pt x 416.45587pt>
-File: figure/G_dG_t.png Graphic file (type png)
-<use figure/G_dG_t.png>
-Package pdftex.def Info: figure/G_dG_t.png  used on input line 281.
-(pdftex.def)             Requested size: 246.0pt x 159.05554pt.
-<figure/TE_dG.png, id=47, 626.94225pt x 416.45587pt>
-File: figure/TE_dG.png Graphic file (type png)
-<use figure/TE_dG.png>
-Package pdftex.def Info: figure/TE_dG.png  used on input line 294.
-(pdftex.def)             Requested size: 246.0pt x 163.40845pt.
-<figure/TE_act_time.png, id=48, 554.67226pt x 430.90988pt>
-File: figure/TE_act_time.png Graphic file (type png)
-<use figure/TE_act_time.png>
-Package pdftex.def Info: figure/TE_act_time.png  used on input line 303.
-(pdftex.def)             Requested size: 246.0pt x 191.11322pt.
+[3 <./figure/v_lam_cent.png> <./figure/I_cent.png> <./figure/comm_cent.png>]
 
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 320.
+
+<figure/time_series.png, id=45, 481.49887pt x 770.57887pt>
+File: figure/time_series.png Graphic file (type png)
+<use figure/time_series.png>
+Package pdftex.def Info: figure/time_series.png  used on input line 331.
+(pdftex.def)             Requested size: 246.0pt x 393.69551pt.
+<figure/time_align.png, id=46, 531.1845pt x 416.45587pt>
+File: figure/time_align.png Graphic file (type png)
+<use figure/time_align.png>
+Package pdftex.def Info: figure/time_align.png  used on input line 338.
+(pdftex.def)             Requested size: 246.0pt x 192.86836pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/mod_dG.png, id=49, 613.39163pt x 416.45587pt>
-File: figure/mod_dG.png Graphic file (type png)
-<use figure/mod_dG.png>
-Package pdftex.def Info: figure/mod_dG.png  used on input line 315.
-(pdftex.def)             Requested size: 246.0pt x 167.01785pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figure/dual_task.png, id=50, 697.4055pt x 476.07863pt>
+<figure/dual_task.png, id=47, 697.4055pt x 476.07863pt>
 File: figure/dual_task.png Graphic file (type png)
 <use figure/dual_task.png>
-Package pdftex.def Info: figure/dual_task.png  used on input line 326.
+Package pdftex.def Info: figure/dual_task.png  used on input line 349.
 (pdftex.def)             Requested size: 246.0pt x 167.93033pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/guimera_combine.png, id=51, 657.657pt x 1240.33388pt>
+<figure/guimera_combine.png, id=48, 657.657pt x 1240.33388pt>
 File: figure/guimera_combine.png Graphic file (type png)
 <use figure/guimera_combine.png>
-Package pdftex.def Info: figure/guimera_combine.png  used on input line 335.
+Package pdftex.def Info: figure/guimera_combine.png  used on input line 358.
 (pdftex.def)             Requested size: 246.0pt x 463.95065pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./figure/G_dG_t.png> <./figure/TE_dG.png> <./figure/TE_act_time.png> <./fig
-ure/mod_dG.png>]
+[4 <./figure/in_TE.png> <./figure/out_TE.png> <./figure/time_series.png>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 344.
+ on input line 367.
 
-(./paper1.bbl
-Underfull \hbox (badness 2443) in paragraph at lines 102--108
- \OT1/cmr/m/n/9 Ex-per-i-ment \OT1/cmr/bx/n/9 2008\OT1/cmr/m/n/9 , 10.1088/1742
--5468/2008/10/P10008
- []
-
-) [5 <./figure/dual_task.png>] [6 <./figure/guimera_combine.png>] (./paper1.aux
-)
+(./paper1.bbl) [5 <./figure/time_align.png> <./figure/dual_task.png>] [6 <./fig
+ure/guimera_combine.png>] (./paper1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4624 strings out of 492616
- 61202 string characters out of 6129482
- 144451 words of memory out of 5000000
- 8447 multiletter control sequences out of 15000+600000
- 17230 words of font info for 64 fonts, out of 8000000 for 9000
+ 4627 strings out of 492616
+ 61515 string characters out of 6129482
+ 146530 words of memory out of 5000000
+ 8441 multiletter control sequences out of 15000+600000
+ 17791 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,29p,347b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
@@ -502,10 +504,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper1.pdf (6 pages, 1014368 bytes).
+Output written on paper1.pdf (6 pages, 955449 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

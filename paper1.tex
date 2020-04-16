@@ -43,6 +43,7 @@
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
+\usepackage{bbold}
 %\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -116,7 +117,7 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 
 \subsection{Graph Generalization}
 
-\textbf{talk about how to map the original nanowire network on to a graph}.
+\textbf{Talk about how to map the original nanowire network on to a graph. Cite Zdenka here}.
 
 \begin{figure}[h]
 	\centering
@@ -132,6 +133,32 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 	\label{fig:graph_plot}
 \end{figure}
 
+\subsection{\label{sec:level2} Simulation}
+When connected to external voltage biases, nanowire networks behave like traditional electrical networks. Each component in the network obeys Kirchhoff's law. Hence the voltage distribution across the network can be obtained by solving \cite{Dorfler2018}:
+
+\begin{equation}
+{\cal L}^\dagger V = I,
+\end{equation}
+
+where $\mathcal{L}^\dagger$ is the expanded graph Laplacian of the network, composed as:
+
+\begin{equation}
+	\cal L^\dagger = 
+	\left[
+	\begin{array}{c|c}
+	\cal L&  C\\ 
+	\hline
+	C^T & \mathbb{0}  
+	\end{array}
+	\right],
+\end{equation}
+
+in which $\cal L$ is the graph Laplacian and $C$ represents the nodes (wires) connected to external electrodes. 
+
+\begin{equation}
+{\cal L} = D - W
+\end{equation}
+
 \subsection{\label{sec:level2} Centrality}
 Centrality \textbf{Put some reference here} is an important measure that helps understand the fundamental structures and connectivities of networks. Betweenness centrality of nodes and edges in networks can demonstrate .... Meanwhile, closeness centrality of nodes can be used to interpret the ..... \cite{Newman2010}.
 
@@ -142,6 +169,8 @@ The betweenness centrality of a edge in the networks can be determined by:
 \begin{equation}
 c_{CB}(e) = \frac{\sum \limits_{s \neq t \in V}\tau_{st}(e)}{(n-1)(n-2)},
 \end{equation}
+
+
 
 where $\tau_{st}(e)$ is the current flow through edge $e$ between nodes $s$ and $t$, while $n$ stands for number of nodes in the network.
 
@@ -176,6 +205,14 @@ Q^w = \frac{1}{I^w} \sum \limits_{i,j} \left[W_{ij} - \frac{k_i^w k_j^w}{I^w} \r
 \end{equation}
 
 in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
+
+\subsection{\label{sec:level2} Communicability}
+Communicability in a network represents .... \cite{Estrada2008}. 
+
+In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $M$ is generated to depict the communicability distribution, where $M_{i,j}$ represents the communicability between nodes $i$ and $j$. Therefore, $M$ reads:
+\begin{equation}
+M = \exp{(D^{-1/2} W D^{-1/2})}.
+\end{equation} 
 
 \section{\label{sec:level1} Results }
 
@@ -276,12 +313,6 @@ With 50 repetitions of different source/target pairing (while keeping the graphi
 
 The conductance time-series of the network reflects the activation stage of the network. Specifically, $\Delta G$ can help identify the avalanche behaviors of the network.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figure/G_dG_t}
-	\caption{}
-	\label{fig:g_dg_t}
-\end{figure}
 
 \paragraph{TE time series}
 
@@ -289,32 +320,24 @@ The transfer entropy across the whole network is calculated in the same way as b
 
 Plotting TE time-series together with $\Delta G$ in the same figure, the spikes of both curves coincide.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figure/TE_dG}
-	\caption{}
-	\label{fig:te_dg}
-\end{figure}
-
 Different amplitude of voltage biases are applied to the network. The activation time and TE peak time in these realizations line-up pretty well.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figure/TE_act_time}
-	\caption{}
-	\label{fig:te_act_time}
-\end{figure}
-
 
 \paragraph{Modularity time series}
 
 Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
 
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{figure/time_series}
+	\caption{}
+	\label{fig:time_series}
+\end{figure}
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{figure/mod_dG}
+	\includegraphics[width=1\linewidth]{figure/time_align}
 	\caption{}
-	\label{fig:mod_dg}
+	\label{fig:time_align}
 \end{figure}
 
 \subsection{Dual task}
