@@ -156,8 +156,20 @@ where $\mathcal{L}^\dagger$ is the expanded graph Laplacian of the network, comp
 in which $\cal L$ is the graph Laplacian and $C$ represents the nodes (wires) connected to external electrodes. 
 
 \begin{equation}
-{\cal L} = D - W
+{\cal L} = D - W.
 \end{equation}
+
+Here $W$ is the weighted adjacency matrix of the network. The weights on edges are determined based on their conductance:
+\begin{equation}
+	W_{ij} = A_{ij}G(i,j).
+\end{equation}
+
+And $D$ is the weighted degree matrix generated from $W$:
+\begin{align}
+	d_i = \sum \limits_{k=1}^{N} W_{i,k},\\
+	D = \textbf{diag}(d_i).
+\end{align}
+
 
 \subsection{\label{sec:level2} Centrality}
 Centrality \textbf{Put some reference here} is an important measure that helps understand the fundamental structures and connectivities of networks. Betweenness centrality of nodes and edges in networks can demonstrate .... Meanwhile, closeness centrality of nodes can be used to interpret the ..... \cite{Newman2010}.
@@ -181,7 +193,29 @@ c_{CC}(v) = \frac{n-1}{\sum \limits_{v \neq w \in V} R(v,w)}.
 \end{equation}
 In the context of a unit $st$-current in the network, $R(v,w)$ represents the effective resistance between nodes $v$ and $w$.
 
+\subsection{\label{sec:level2} Communicability}
+Communicability in a network represents .... \cite{Estrada2008}. 
 
+In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $M$ is generated to depict the communicability distribution, where $M_{i,j}$ represents the communicability between nodes $i$ and $j$. Therefore, $M$ reads:
+\begin{equation}
+M = \exp{(D^{-1/2} W D^{-1/2})}.
+\end{equation} 
+
+\subsection{\label{sec:level2} Modularity}
+Modularity is a network metric that ..... \textbf{talk about it here} \cite{Rubinov2009}.
+
+Recent studies in neuro-science demonstrated that modularity plays an important role in .... \textbf{talk about it here} \cite{Godwin2015}. 
+ 
+Modularity ($Q^w$) in a weighted network can be calculated by the Louvain method \cite{Blondel2008}:
+ 
+% \begin{equation}
+% Q^w = \frac{1}{I^w} \sum \limits_{i,j} \left[W_{ij} - \frac{k_i^w k_j^w}{I^w} \right] \delta(m_i, m_j),
+% \end{equation}
+\begin{equation}
+Q^w = \frac{1}{D} \sum \limits_{i,j} \left[W_{ij} - \frac{d_i d_j}{D} \right] \delta(m_i, m_j),
+\end{equation}
+
+in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
 
 \subsection{\label{sec:level2} Transfer Entropy}
 
@@ -193,26 +227,19 @@ T_{Y \rightarrow X} = \sum \limits_{u_n} p(u_n) \log \frac{p(x_{n+1}| x_n^{(k)},
 
 $n$ is a time index, $u_n$ represents the state transition tuple $(x_{n+1}, x_n^{(k)}, y_n^{(l)})$, $x_n^{(k)}, y_n^{(l)}$ represent the $k$ and $l$ past values of $x$ and $y$ up to and including time $n$. \textbf{rephrase here}.
 
-\subsection{\label{sec:level2} Modularity}
-Modularity is a network metric that ..... \textbf{talk about it here} \cite{Rubinov2009}.
 
-Recent studies in neuro-science demonstrated that modularity plays an important role in .... \textbf{talk about it here} \cite{Godwin2015}. 
- 
-Modularity ($Q^w$) in a weighted network can be calculated by the Louvain method \cite{Blondel2008}:
- 
+The transfer entropy across an edge ($e_{i,j}$) is calculated by:
+\textbf{Have to write these equations in a better manner.}
+
 \begin{equation}
-Q^w = \frac{1}{I^w} \sum \limits_{i,j} \left[W_{ij} - \frac{k_i^w k_j^w}{I^w} \right] \delta(m_i, m_j),
+TE_{i,j} = T_{V_i \rightarrow V_j}
 \end{equation}
 
-in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
+And therefore the average outward TE and inward TE of a node can be calculated by:
 
-\subsection{\label{sec:level2} Communicability}
-Communicability in a network represents .... \cite{Estrada2008}. 
-
-In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $M$ is generated to depict the communicability distribution, where $M_{i,j}$ represents the communicability between nodes $i$ and $j$. Therefore, $M$ reads:
 \begin{equation}
-M = \exp{(D^{-1/2} W D^{-1/2})}.
-\end{equation} 
+\langle TEout_i \rangle = \frac{\sum \limits_{i,j, A_{i,j} \neq 0} TEout}{\text{\# of edges connected to i}}
+\end{equation}
 
 \section{\label{sec:level1} Results }
 
@@ -220,10 +247,11 @@ M = \exp{(D^{-1/2} W D^{-1/2})}.
 
 \textbf{100 nw is used here. Might have to use 700 nw for consistency.}
 
+As the network evolves, the edges close to sources and drains will be turned on first. A winner-takes-all current path will form, then branches out to the rest of the network. Among all sorts of metrics, voltage distribution on nodes $\vec{V_n}$ and on edges $\vec{V_e}$ would be the most important ones as they determine the network's state.
 
-\paragraph{Voltage distribution}
+\paragraph{Voltage distribution} 
 
-Voltage distribution at a specific time $t$ in the network can be roughly determined by the weighted current flow betweenness centrality. As shown in fig. \ref{fig:v_lam_cent}, voltage and filament state as functions of centrality is plotted. 
+Voltage distribution on edges at a specific time $\vec{V_e}(t)$ shows a clear correlation with edge current flow betweenness centrality. Meanwhile, since the filament states $\lambda$ strongly rely on voltage distribution $\vec{V_e}(t)$, a correlation between $\lambda$ and EBC as well. As plotted in fig. \ref{fig:v_lam_cent}, for $\vec{V_e(t)}$ two linear groups 
 
 \begin{itemize}
 \item \textbf{Rephrase here.}
@@ -272,20 +300,6 @@ The plot of comm vs node closeness cent shows something .....
 
 \paragraph{Node Transfer Entropy}
 The wire closeness centrality also shows an interesting correlation with transfer entropy. More specifically, the capabilities of taking in and giving out information. 
-
-The transfer entropy across an edge ($e_{i,j}$) is calculated by:
-
-\textbf{Have to write these equations in a better manner.}
-
-\begin{equation}
-TE_{i,j} = T_{V_i \rightarrow V_j}
-\end{equation}
-
-And therefore the average outward TE and inward TE of a node can be calculated by:
-
-\begin{equation}
-\langle TEout_i \rangle = \frac{\sum \limits_{i,j, A_{i,j} \neq 0} TEout}{\text{\# of edges connected to i}}
-\end{equation}
 
 With 50 repetitions of different source/target pairing (while keeping the graphical distance between them constant), TE shows a close to linear relationship with centrality as well:
 
@@ -341,8 +355,9 @@ Modularity of the network is calculated throughout the activation. The drop of M
 \end{figure}
 
 \subsection{Dual task}
+\textbf{Might change to a smaller amplitude. Here modularity peak at $t=10$, too small to capture TE.}
 
-Pre-activate the network with Mackey-Glass signal, extract the state from different time-points. Then do a non-linear signal transform on it.
+Pre-activate the network with Mackey-Glass signal, extract the state from different time-points. Then do a non-linear signal transform on it. 
 
 \begin{figure}[h]
 	\centering
@@ -361,7 +376,6 @@ The Guimera \textbf{cite here} plots can be displayed as follow:
 \end{figure}
 
 \textbf{Have to match the color bars here.}
-
 
 \newpage
 \section{\label{sec:level1} Discussion}

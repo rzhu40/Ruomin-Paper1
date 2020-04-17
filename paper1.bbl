@@ -79,6 +79,26 @@
   {Lecture Notes in Computer Science}}},\ Vol.\ \bibinfo {volume} {3404}\
   (\bibinfo {year} {2005})\ pp.\ \bibinfo {pages} {533--544}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Estrada}\ and\ \citenamefont
+  {Hatano}(2008)}]{Estrada2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Estrada}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Hatano}},\ }\href {https://doi.org/10.1103/PhysRevE.77.036111} {\emph
+  {\bibinfo {title} {Physical Review E - Statistical, Nonlinear, and Soft
+  Matter Physics}}},\ \bibinfo {type} {Tech. Rep.}\ \bibinfo {number} {3}\
+  (\bibinfo {year} {2008})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Crofts}\ and\ \citenamefont
+  {Higham}(2009)}]{Crofts2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Crofts}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Higham}},\ }\bibfield  {title} {\bibinfo {title} {{A weighted
+  communicability measure applied to complex brain networks}},\ }\href
+  {https://doi.org/10.1098/rsif.2008.0484} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of the Royal Society Interface}\ }\textbf {\bibinfo
+  {volume} {6}},\ \bibinfo {pages} {411} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Rubinov}\ and\ \citenamefont
   {Sporns}(2009)}]{Rubinov2009}%
   \BibitemOpen
@@ -115,24 +135,4 @@
   {volume} {2008}},\ \href {https://doi.org/10.1088/1742-5468/2008/10/P10008}
   {10.1088/1742-5468/2008/10/P10008} (\bibinfo {year} {2008}),\ \Eprint
   {https://arxiv.org/abs/0803.0476} {arXiv:0803.0476} \BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Estrada}\ and\ \citenamefont
-  {Hatano}(2008)}]{Estrada2008}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Estrada}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Hatano}},\ }\href {https://doi.org/10.1103/PhysRevE.77.036111} {\emph
-  {\bibinfo {title} {Physical Review E - Statistical, Nonlinear, and Soft
-  Matter Physics}}},\ \bibinfo {type} {Tech. Rep.}\ \bibinfo {number} {3}\
-  (\bibinfo {year} {2008})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Crofts}\ and\ \citenamefont
-  {Higham}(2009)}]{Crofts2009}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
-  {Crofts}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
-  {Higham}},\ }\bibfield  {title} {\bibinfo {title} {{A weighted
-  communicability measure applied to complex brain networks}},\ }\href
-  {https://doi.org/10.1098/rsif.2008.0484} {\bibfield  {journal} {\bibinfo
-  {journal} {Journal of the Royal Society Interface}\ }\textbf {\bibinfo
-  {volume} {6}},\ \bibinfo {pages} {411} (\bibinfo {year} {2009})}\BibitemShut
-  {NoStop}%
 \end{thebibliography}%
