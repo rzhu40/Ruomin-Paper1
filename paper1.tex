@@ -60,7 +60,7 @@
 
 \preprint{APS/123-QED}
 
-\title{Manuscript Title:\\with Forced Linebreak}% Force line breaks with \\
+\title{Spatio-temporal dynamics in nanowire networks}% Force line breaks with \\
 \thanks{A footnote to the article title}%
 
 \author{Ann Author}
@@ -180,6 +180,7 @@ The betweenness centrality of a edge in the networks can be determined by:
 
 \begin{equation}
 c_{CB}(e) = \frac{\sum \limits_{s \neq t \in V}\tau_{st}(e)}{(n-1)(n-2)},
+\label{eq:ebc}
 \end{equation}
 
 
@@ -196,10 +197,18 @@ In the context of a unit $st$-current in the network, $R(v,w)$ represents the ef
 \subsection{\label{sec:level2} Communicability}
 Communicability in a network represents .... \cite{Estrada2008}. 
 
-In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $M$ is generated to depict the communicability distribution, where $M_{i,j}$ represents the communicability between nodes $i$ and $j$. Therefore, $M$ reads:
+In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $M$ is generated to depict the communicability distribution, where $M_{ij}$ represents the communicability between nodes $i$ and $j$. Therefore, $M$ reads:
 \begin{equation}
 M = \exp{(D^{-1/2} W D^{-1/2})}.
 \end{equation} 
+
+The communicability of a node can be defined as how communicable the node is to the rest of the network, which will have the expression as:
+
+\begin{equation}
+	m_i = \sum \limits_{k = 1}^N M_{ik}, \qquad k \neq i.
+\end{equation}
+
+
 
 \subsection{\label{sec:level2} Modularity}
 Modularity is a network metric that ..... \textbf{talk about it here} \cite{Rubinov2009}.
@@ -213,6 +222,7 @@ Modularity ($Q^w$) in a weighted network can be calculated by the Louvain method
 % \end{equation}
 \begin{equation}
 Q^w = \frac{1}{D} \sum \limits_{i,j} \left[W_{ij} - \frac{d_i d_j}{D} \right] \delta(m_i, m_j),
+\label{eq:mod}
 \end{equation}
 
 in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
@@ -245,32 +255,29 @@ And therefore the average outward TE and inward TE of a node can be calculated b
 
 \subsection{\label{sec:level2} Centrality and Dynamics}
 
-\textbf{100 nw is used here. Might have to use 700 nw for consistency.}
+As the network evolves, the edges close to sources and drains will be turned on first. A winner-takes-all current path will be formed, then branches out to the rest of the network. The current paths are more likely to be formed first at the most central positions and then the peripherals. At a specific time $t$, current-flow betweenness centrality of edges can be determined by \ref{eq:ebc}. The edges with higher centrality are more likely to exhibit higher filament state and voltage.
 
-As the network evolves, the edges close to sources and drains will be turned on first. A winner-takes-all current path will form, then branches out to the rest of the network. Among all sorts of metrics, voltage distribution on nodes $\vec{V_n}$ and on edges $\vec{V_e}$ would be the most important ones as they determine the network's state.
+Meanwhile, voltage ($\vec{V_e}$) and filament state ($\vec{\lambda}$) are strongly coupled in the network. Higher voltage on an edge will lead to faster growth of its filament state. In return, higher filament state  means the edge will have a higher conductance (\textbf{refer to equation here}), which increase the chance for the edge to achieve higher voltage.
+
+% Among all sorts of metrics, voltage distribution on nodes $\vec{V_n}$ and on edges $\vec{V_e}$ would be the most interesting ones since the change rate of conductances exhibited by edges are determined by $\vec{V_e}$. Meanwhile changes of conductance at edges will lead to a redistribution of voltage across the voltage.
+
+\paragraph{Filament state}
+
+The absolute values of filament states $|\vec{\lambda (t)}|$ as a function of edge current-flow betweenness centrality are plotted on fig. \ref{fig:v_lam_cent} with its data points colored by corresponding conductance states. The plot shows that edges at more preferable positions will have greater filament growth. The color spectrum on the plot also validates the conductance transition of edges based on their filament states. These high centrality edges are having significantly higher conductance since their filament states are greater than $0.1$, and thus form the first current path.
 
 \paragraph{Voltage distribution} 
 
-Voltage distribution on edges at a specific time $\vec{V_e}(t)$ shows a clear correlation with edge current flow betweenness centrality. Meanwhile, since the filament states $\lambda$ strongly rely on voltage distribution $\vec{V_e}(t)$, a correlation between $\lambda$ and EBC as well. As plotted in fig. \ref{fig:v_lam_cent}, for $\vec{V_e(t)}$ two linear groups 
-
-\begin{itemize}
-\item \textbf{Rephrase here.}
-\item Two clustered groups (ON and OFF). 
-\item Transition in between because of the continuity brought in by tunneling model.
-\item Maybe include power consumption here as well.
-\end{itemize}
+Voltage distribution on edges $|\vec{V_e(t)}|$ as a function of centrality is also included in fig. \ref{fig:v_lam_cent} with the same coloring scheme. The data points can be clearly classified into three regimes. The two linear regimes at the left and right ends correspond to the OFF and ON edges. The transition regime in between therefore represents the edges whose conductance are at some middle values in the tunneling model. The plot indicates that within each regime, edges with higher centrality will have higher voltage. The ones who are having higher voltages will be turned on first to form a current path.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/v_lam_cent}
-	\caption{T=2.9, around pathway formation. crosses are voltages and triangles are filament states.}
+	\caption{Absolute values of voltage and filament as a function of centrality at T = 2.9 s. Current path was formed at . Current-flow betweenness centrality is calculated by Eq. \ref{eq:ebc}. The data points are colored based on their corresponding conductance.}
 	\label{fig:v_lam_cent}
 \end{figure}
 
 \paragraph{Current flow}
-
-\textbf{Maybe try power dissipation of nanowire as well.}
-
+\textbf{Not sure if we have  to keep this}
 The cumulative current flow through nanowires shows are linear relationship versus node current flow betweenness centrality. fig. \ref{fig:i_cent}.
 
 \begin{figure}[h]
@@ -280,6 +287,7 @@ The cumulative current flow through nanowires shows are linear relationship vers
 	\label{fig:i_cent}
 \end{figure}
 
+\newpage
 \subsection{\label{sec:level2} Centrality and Functionality}
 
 \paragraph{Mean communicability}
@@ -306,15 +314,15 @@ With 50 repetitions of different source/target pairing (while keeping the graphi
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/in_TE}
-	\caption{}
+	\caption{\textbf{Might not need color here. Node in TE as a function of centrality. (Out TE in  supplement)} TE is calculated based on Eq \textbf{equation}. Node centrality is calculated based on the current-flow closeness algorithm at $t = 0$. Communicability is calculated by Eq \textbf{equation} at $t = 0$ as well. 50 simulations with different source-drain pairings are done on the same 100 network. All the source-drain pairings are controlled to have same graphical distance. Identical Mackey-Glass signals are applied to these simulations to activate the network. Each data point on the plot represent one node in one simulation. A close to linear correlation between TE and centrality can be determined from the plot, which means nodes with higher centralities tend to have richer dynamics for taking in and sending out information.}
 	\label{fig:in_te}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{figure/out_TE}
+	\includegraphics[width=1\linewidth]{figure/TE_cent_act}
 	\caption{}
-	\label{fig:out_te}
+	\label{fig:TE_cent_act}
 \end{figure}
 
 
@@ -323,36 +331,69 @@ With 50 repetitions of different source/target pairing (while keeping the graphi
 
 \subsection{Time-series analysis}
 
-\paragraph{$\Delta G$}
-
-The conductance time-series of the network reflects the activation stage of the network. Specifically, $\Delta G$ can help identify the avalanche behaviors of the network.
-
-
-\paragraph{TE time series}
-
-The transfer entropy across the whole network is calculated in the same way as before. The average is taken over the whole network the time series to obtain the time series.
-
-Plotting TE time-series together with $\Delta G$ in the same figure, the spikes of both curves coincide.
-
-Different amplitude of voltage biases are applied to the network. The activation time and TE peak time in these realizations line-up pretty well.
-
-\paragraph{Modularity time series}
-
-Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
-
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{figure/time_series}
-	\caption{}
+	\caption{\textbf{Time series data for network measures.} The dashed vertical green line represents the 			time of first current path formation.
+			\newline (a) Collective conductance of network as a function of time. The collective conductance started increasing when the first edge is turned on. The growth will slow down after the first current path is formed.
+			\newline (b) The time derivative of conductance. The derivative is calculated using second order accurate central differences on the collective conductance time series data. The growth regime of conductance shows a great correspondence of $\Delta G$'s spikes.
+			\newline (c) Transfer entropy as a function of time. The transfer entropy time series data here is calculated with the Kraskov estimator and averaged across the network. A moving average with window size of 100 is applied to smooth the curve. Transfer entropy in the activation period is significantly higher than the rest.
+			\newline (d) Modularity as a function of time. The weighted modularity of network is calculated by Louvain method(Eq. \ref{eq:mod}) As the network evolves, modularity will first increase as high conductance edges are spread across the network and having their own communities. With the formation of the first current path, the modularity will have a significant drop since these isolating communities are connected. Then the modularity will keep having such fluctuations with smaller scales as more edges are turned on and forming new current paths.}
 	\label{fig:time_series}
 \end{figure}
 
+Time series analysis of the network's activation can be even more intriguing. As plotted in Fig. \ref{fig:time_series}(a), the activation of the network mainly have three regimes - the resting (\textbf{maybe another word} ?ground ?low-conductance) regime, the transition regime and the stable (?equilibrium ?high-conductance) regime. Key events of the activation also coincide with each other on time scale. 
+
+
+In the resting regime, the junctions are all OFF. Collective conductance of the network remains low. Filament states on junctions start to grow based on their voltage. Increase of conductance will first take place at junctions with preferred positions. Information flow is high when the signal first came in, but in general at a low level in this regime. The modularity level stays constant when all junctions are at low-conductance state. A peak in modularity will then emerge when certain junctions in the network starts to have higher conductances as they are forming "highlands". When more junctions experience conductance increase, modularity starts to drop.
+
+The transition regime starts when the first switches are turned on (\textbf{Here it's the tunneling model so maybe some other wording. Like some switches are exhibiting higher conductance}). Collective conductance of the network starts to increase significantly as the time derivative will have a spike. Modularity of the network reaches the bottom level \textbf{wording here}. With more junctions turned ON, the first current path (winner-takes-all) will be formed and the conductance keeps increasing with a lower path. Modularity starts to increase again as the nodes on the current path stands out from the rest of the network. Information flow will increase to a higher scale (A spike in Gaussian data). 
+
+The transition regime ends when most junctions are at high-conductance states (the rest are not reachable with this specific source-drain pairing). Collective conductance will be stable at a high level. Information flow will decrease to a lower scale similar to the resting regime. The modularity will also be stable in this regime.
+
+
+% \paragraph{$\Delta G$}
+
+% The conductance time-series of the network reflects the activation stage of the network. Specifically, $\Delta G$ can help identify the avalanche behaviors of the network.
+
+
+% \paragraph{TE time series}
+
+% The transfer entropy across the whole network is calculated in the same way as before. The average is taken over the whole network the time series to obtain the time series.
+
+% Plotting TE time-series together with $\Delta G$ in the same figure, the spikes of both curves coincide.
+
+% Different amplitude of voltage biases are applied to the network. The activation time and TE peak time in these realizations line-up pretty well.
+
+% \paragraph{Modularity time series}
+
+% Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
+
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/time_align}
-	\caption{}
+	\caption{\textbf{Key events time as functions of first current path formation time.} 
+			The same 100 network is used for 50 simulations with different source-drain pairings. The graphical distances between sources and drains are controlled to be constant. Identical Mackey-Glass signal with random amplitudes ranging between 2-5 V are applied to these simulations. Simulations with higher amplitudes will form current paths earlier. 
+			\newline 
+			X-axis represents the current path formation time in different simulations. Y-axis represents the corresponding time for key events to take place in these simulations. As shown in this figure, key events such as $\Delta G$ maximum, TE spike (in Gaussian estimation) and modularity drop will happen around the first current path formation time. 
+			\newline
+			\textbf{Rephrase here} Thus the network will be optimal for information processing and specific task around the transition phase when the first current path is forming and the network is turning on. }
 	\label{fig:time_align}
 \end{figure}
+
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width = 0.8\paperwidth]{figure/time_network_comparison}
+	\caption{\textbf{Network information flow snapshots at different time points.}
+			Snapshots of the network are taken at time points before activation ($t = 0.5s$), when the first current path formation ($t=1.465s$), when the network finishes large scale activation ($t = 2s$) and when the network is stable with high collective conductance ($t = 2.5s$).
+			Nodes are colored with time-averaged TE flow (inTE + outTE) within the last 0.2 second window using the Kraskov estimator. Edges are colored by the sum of corresponding transfer entropy in both directions. TEs are increasing when the network is being activated and richer dynamics emerge. After the network reaches a stable state (t = 2.5 s), the TEs activities decay as well.}
+	\label{fig:network_comparison}
+\end{figure*}
+
+
+
 
 \subsection{Dual task}
 \textbf{Might change to a smaller amplitude. Here modularity peak at $t=10$, too small to capture TE.}
@@ -361,21 +402,21 @@ Pre-activate the network with Mackey-Glass signal, extract the state from differ
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{figure/dual_task}
+	\includegraphics[width=1\linewidth]{figure/pre_act_task}
 	\caption{}
-	\label{fig:dual_task}
+	\label{fig:pre_act_task}
 \end{figure}
 
-The Guimera \textbf{cite here} plots can be displayed as follow:
+% The Guimera \textbf{cite here} plots can be displayed as follow:
  
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figure/guimera_combine}
-	\caption{}
-	\label{fig:guimera_combine}
-\end{figure}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=1\linewidth]{figure/guimera_combine}
+% 	\caption{}
+% 	\label{fig:guimera_combine}
+% \end{figure}
 
-\textbf{Have to match the color bars here.}
+% \textbf{Have to match the color bars here.}
 
 \newpage
 \section{\label{sec:level1} Discussion}
