@@ -24,8 +24,10 @@
 \newlabel{sec:level2}{{II\tmspace  +\thinmuskip {.1667em}C}{2}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C} Centrality}{2}{}}
 \newlabel{eq:ebc}{{7}{2}{}{}{}}
+\newlabel{eq:ecc}{{8}{2}{}{}{}}
 \newlabel{sec:level2}{{II\tmspace  +\thinmuskip {.1667em}D}{2}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {D} Communicability}{2}{}}
+\newlabel{eq:ncomm}{{10}{2}{}{}{}}
 \newlabel{sec:level2}{{II\tmspace  +\thinmuskip {.1667em}E}{2}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {E} Modularity}{2}{}}
 \newlabel{eq:mod}{{11}{2}{}{}{}}
@@ -44,18 +46,16 @@
 \newlabel{fig:i_cent}{{4}{3}{}{}{}}
 \newlabel{sec:level2}{{III\tmspace  +\thinmuskip {.1667em}B}{3}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B} Centrality and Functionality}{3}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {a}Mean communicability}{3}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {b}Node Transfer Entropy}{3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces }}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {Node communicability vs closeness centrality at $t = 2 s$.} Node communicability is calculated by eq. 10{}{}{}\hbox {}. Closeness centrality is calculated by eq. 8{}{}{}\hbox {}. The plot is done on log-log scale. As the nodes at more central positions are having much higher communicabilities (and higher conductance). And the other nodes follows a close to linear trend.}}{4}{}}
 \newlabel{fig:comm_cent}{{5}{4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Time-series analysis}{4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textbf  {Might not need color here. Node in TE as a function of centrality. (Out TE in supplement)} TE is calculated based on Eq \textbf  {equation}. Node centrality is calculated based on the current-flow closeness algorithm at $t = 0$. Communicability is calculated by Eq \textbf  {equation} at $t = 0$ as well. 50 simulations with different source-drain pairings are done on the same 100 network. All the source-drain pairings are controlled to have same graphical distance. Identical Mackey-Glass signals are applied to these simulations to activate the network. Each data point on the plot represent one node in one simulation. A close to linear correlation between TE and centrality can be determined from the plot, which means nodes with higher centralities tend to have richer dynamics for taking in and sending out information.}}{4}{}}
 \newlabel{fig:in_te}{{6}{4}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {c}Node Active Information Storage}{4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces }}{4}{}}
-\newlabel{fig:TE_cent_act}{{7}{4}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}Time-series analysis}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textbf  {inTE vs closeness centrality around activation.} The same activation test is done as fig. 6{}{}{}\hbox {}. TE is averaged in a $0.2s$ window right before the activation (mainly to cancel out the randomness). Centrality is measured at the current path formation time. The high centrality nodes are the ones connected to ON edges. They exhibit high communicabilities and high in/out TEs. The nodes in the low centrality group on the other hand indicates that with higher centrality, the nodes will have higher in/out TEs, and thus more capable for information transfer.}}{5}{}}
+\newlabel{fig:TE_cent_act}{{7}{5}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {Time series data for network measures.} The dashed vertical green line represents the time of first current path formation. \newline  (a) Collective conductance of network as a function of time. The collective conductance started increasing when the first edge is turned on. The growth will slow down after the first current path is formed. \newline  (b) The time derivative of conductance. The derivative is calculated using second order accurate central differences on the collective conductance time series data. The growth regime of conductance shows a great correspondence of $\Delta G$'s spikes. \newline  (c) Transfer entropy as a function of time. The transfer entropy time series data here is calculated with the Kraskov estimator and averaged across the network. A moving average with window size of 100 is applied to smooth the curve. Transfer entropy in the activation period is significantly higher than the rest. \newline  (d) Modularity as a function of time. The weighted modularity of network is calculated by Louvain method(Eq. 11{}{}{}\hbox {}) As the network evolves, modularity will first increase as high conductance edges are spread across the network and having their own communities. With the formation of the first current path, the modularity will have a significant drop since these isolating communities are connected. Then the modularity will keep having such fluctuations with smaller scales as more edges are turned on and forming new current paths.}}{5}{}}
 \newlabel{fig:time_series}{{8}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Pre activation task}{6}{}}
 \citation{*}
 \bibdata{paper1Notes,paper1}
 \bibcite{Dorfler2018}{{1}{2018}{{Dorfler\ \emph  {et~al.}}}{{Dorfler, Simpson-Porco,\ and\ Bullo}}}
@@ -69,22 +69,21 @@
 \bibstyle{apsrev4-2}
 \citation{REVTEX42Control}
 \citation{apsrev42Control}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Key events time as functions of first current path formation time.} The same 100 network is used for 50 simulations with different source-drain pairings. The graphical distances between sources and drains are controlled to be constant. Identical Mackey-Glass signal with random amplitudes ranging between 2-5 V are applied to these simulations. Simulations with higher amplitudes will form current paths earlier. \newline  X-axis represents the current path formation time in different simulations. Y-axis represents the corresponding time for key events to take place in these simulations. As shown in this figure, key events such as $\Delta G$ maximum, TE spike (in Gaussian estimation) and modularity drop will happen around the first current path formation time. \newline  \textbf  {Rephrase here} Thus the network will be optimal for information processing and specific task around the transition phase when the first current path is forming and the network is turning on. }}{6}{}}
-\newlabel{fig:time_align}{{9}{6}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {D}Dual task}{6}{}}
-\newlabel{sec:level1}{{IV}{6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV} Discussion}{6}{}}
-\newlabel{sec:level1}{{V}{6}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V} Conclusion}{6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{6}{}}
+\newlabel{sec:level1}{{IV}{7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV} Discussion}{7}{}}
+\newlabel{sec:level1}{{V}{7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V} Conclusion}{7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{7}{}}
 \@writefile{toc}{\appendix }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Appendixes}{6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}A little more on appendixes}{6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{6}{}}
-\newlabel{LastBibItem}{{8}{6}{}{}{}}
-\newlabel{paper1}{{B}{6}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Network information flow snapshots at different time points.} Snapshots of the network are taken at time points before activation ($t = 0.5s$), when the first current path formation ($t=1.465s$), when the network finishes large scale activation ($t = 2s$) and when the network is stable with high collective conductance ($t = 2.5s$). Nodes are colored with time-averaged TE flow (inTE + outTE) within the last 0.2 second window using the Kraskov estimator. Edges are colored by the sum of corresponding transfer entropy in both directions. TEs are increasing when the network is being activated and richer dynamics emerge. After the network reaches a stable state (t = 2.5 s), the TEs activities decay as well.}}{7}{}}
-\newlabel{fig:network_comparison}{{10}{7}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces }}{8}{}}
-\newlabel{fig:pre_act_task}{{11}{8}{}{}{}}
-\newlabel{LastPage}{{}{8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendixes}{7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}A little more on appendixes}{7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{7}{}}
+\newlabel{LastBibItem}{{8}{7}{}{}{}}
+\newlabel{paper1}{{B}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Network information flow snapshots at different time points.} Snapshots of the network are taken at time points before activation ($t = 0.5s$), when the first current path formation ($t=1.465s$), when the network finishes large scale activation ($t = 2s$) and when the network is stable with high collective conductance ($t = 2.5s$). Nodes are colored with time-averaged TE flow (inTE + outTE) within the last 0.2 second window using the Kraskov estimator. Edges are colored by the sum of corresponding transfer entropy in both directions. TEs are increasing when the network is being activated and richer dynamics emerge. After the network reaches a stable state (t = 2.5 s), the TEs activities decay as well.}}{8}{}}
+\newlabel{fig:network_comparison}{{9}{8}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Key events time as functions of first current path formation time.} The same 100 network is used for 50 simulations with different source-drain pairings. The graphical distances between sources and drains are controlled to be constant. Identical Mackey-Glass signal with random amplitudes ranging between 2-5 V are applied to these simulations. Simulations with higher amplitudes will form current paths earlier. \newline  X-axis represents the current path formation time in different simulations. Y-axis represents the corresponding time for key events to take place in these simulations. As shown in this figure, key events such as $\Delta G$ maximum, TE spike (in Gaussian estimation) and modularity drop will happen around the first current path formation time. \newline  \textbf  {Rephrase here} Thus the network will be optimal for information processing and specific task around the transition phase when the first current path is forming and the network is turning on. }}{9}{}}
+\newlabel{fig:time_align}{{10}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces }}{9}{}}
+\newlabel{fig:pre_act_task}{{11}{9}{}{}{}}
+\newlabel{LastPage}{{}{9}{}{}{}}

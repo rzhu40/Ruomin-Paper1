@@ -190,7 +190,8 @@ where $\tau_{st}(e)$ is the current flow through edge $e$ between nodes $s$ and 
 The closeness centrality of a node in this context is structured in the same way as normal closeness centrality, with distance measured based on effective resistance rather than graphical distance. Therefore it is given by:
 
 \begin{equation}
-c_{CC}(v) = \frac{n-1}{\sum \limits_{v \neq w \in V} R(v,w)}.
+	c_{CC}(v) = \frac{n-1}{\sum \limits_{v \neq w \in V} R(v,w)}.
+	\label{eq:ecc}
 \end{equation}
 In the context of a unit $st$-current in the network, $R(v,w)$ represents the effective resistance between nodes $v$ and $w$.
 
@@ -206,6 +207,7 @@ The communicability of a node can be defined as how communicable the node is to 
 
 \begin{equation}
 	m_i = \sum \limits_{k = 1}^N M_{ik}, \qquad k \neq i.
+	\label{eq:ncomm}
 \end{equation}
 
 
@@ -287,29 +289,30 @@ The cumulative current flow through nanowires shows are linear relationship vers
 	\label{fig:i_cent}
 \end{figure}
 
-\newpage
 \subsection{\label{sec:level2} Centrality and Functionality}
 
-\paragraph{Mean communicability}
-Briefly Introduce the idea of communicability. 
+\textbf{WORDING HERE as well.} Intuitively one would think certain nodes in the network will have a more important role for certain functionalities. Here analysis of the network's functionality such as communicability and transfer entropy are presented.
 
-The communicability matrix ($M$) is generated based on $W$.... Each entry represents .... \textbf{might cite some Comm paper here}.
+The communicability of nodes at $t$ can be calculated based on eq. \ref{eq:ncomm}. At an arbitrary time point during the activation (Right after first current path formation here ), when plotted as a function of current-flow closeness centrality on log-log scale, communicability shows as a close to exponential curve, indicating that the nodes at more central positions are more communicable to the rest of the network as this time point. 
 
-The row sum of $M$ can somehow interpret how communicable a node is to the rest of the network.
+% \paragraph{Mean communicability}
+% Briefly Introduce the idea of communicability. 
 
-The plot of comm vs node closeness cent shows something .....
+% The communicability matrix ($M$) is generated based on $W$.... Each entry represents .... \textbf{might cite some Comm paper here}.
+
+% The row sum of $M$ can somehow interpret how communicable a node is to the rest of the network.
+
+% The plot of comm vs node closeness cent shows something .....
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/comm_cent}
-	\caption{}
+	\caption{\textbf{Node communicability vs closeness centrality at $t = 2 s$.} Node communicability is calculated by eq. \ref{eq:ncomm}. Closeness centrality is calculated by eq. \ref{eq:ecc}. The plot is done on log-log scale. As the nodes at more central positions are having much higher communicabilities (and higher conductance). And the other nodes follows a close to linear trend.}
 	\label{fig:comm_cent}
 \end{figure}
 
-\paragraph{Node Transfer Entropy}
-The wire closeness centrality also shows an interesting correlation with transfer entropy. More specifically, the capabilities of taking in and giving out information. 
+The node closeness centrality also shows an interesting correlation with transfer entropy. Here in the context of nodes, the in TE and out TE will be the main focus \textbf{Have to write equations to define in and out}. With 50 repetitions of different source/target pairing (while keeping the graphical distance between them constant), TE averaged across the whole time-series shows a close to linear relationship with centrality on semilogy scale. Centrality here is calculated at $t = 0s$, which reflects the structural properties of the network (as all edges are having same weight at $t = 0s$). Nodes at more central positions have the potential to send out and take in more information flows and exhibit richer dynamics.
 
-With 50 repetitions of different source/target pairing (while keeping the graphical distance between them constant), TE shows a close to linear relationship with centrality as well:
 
 \begin{figure}[h]
 	\centering
@@ -318,16 +321,18 @@ With 50 repetitions of different source/target pairing (while keeping the graphi
 	\label{fig:in_te}
 \end{figure}
 
+Fig. \ref{fig:TE_cent_act} shows the in TE vs C centrality around the time when the first current path forms. On a semilogy scale, the high centrality nodes (centrality calculated at $T = 1.5 s$) are having similar TE and high communicabilities. These are mainly the nodes connected to the ON edges. The low centrality nodes on the other hand indicates that with higher centralities there will be higher TE, which is consistent with our analysis in fig. \ref{in_te}.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/TE_cent_act}
-	\caption{}
+	\caption{\textbf{inTE vs closeness centrality around activation.} The same activation test is done as fig. \ref{fig:in_te}.	TE is averaged in a $0.2s$ window right before the activation (mainly to cancel out the randomness). Centrality is measured at the current path formation time. The high centrality nodes are the ones connected to ON edges. They exhibit high communicabilities and high in/out TEs. The nodes in the low centrality group on the other hand indicates that with higher centrality, the nodes will have higher in/out TEs, and thus more capable for information transfer.}
 	\label{fig:TE_cent_act}
 \end{figure}
 
 
-\paragraph{Node Active Information Storage}
-\textbf{Not sure whether we need it here}.
+% \paragraph{Node Active Information Storage}
+% \textbf{Not sure whether we need it here}.
 
 \subsection{Time-series analysis}
 
@@ -351,6 +356,19 @@ The transition regime starts when the first switches are turned on (\textbf{Here
 
 The transition regime ends when most junctions are at high-conductance states (the rest are not reachable with this specific source-drain pairing). Collective conductance will be stable at a high level. Information flow will decrease to a lower scale similar to the resting regime. The modularity will also be stable in this regime.
 
+Snapshots of the network in different phases shown in fig. \ref{fig:network_comparison}. Nodes are colored with the sum of inTE and outTE averaged in the last $0.2 s$ time window. Similarly, edges are colored by the sum of the TE flows in both direction in the last $0.2$ time window. (Kraskov estimator is used here.) At $t= 0.5$, the whole network is at rest. None of the nodes or edges are having significant information transfer. When the first current path is formed at $t = 1.465 s$, some nodes and edges start to have significant information flow, but most flows are happening around the central nodes. When $t = 2.0 s$, the information flow is even stronger as more nodes are having high in and out TEs. Meanwhile, even nodes at peripheral positions are having significant information flow. After the network is in the equilibrium regime for a while ($t = 2.5s$), the information flows decay as the local TE values are significantly lower than the transition regime.
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width = 0.8\paperwidth]{figure/time_network_comparison}
+	\caption{\textbf{Network information flow snapshots at different time points.}
+			Snapshots of the network are taken at time points before activation ($t = 0.5s$), when the first current path formation ($t=1.465s$), when the network finishes large scale activation ($t = 2s$) and when the network is stable with high collective conductance ($t = 2.5s$).
+			Nodes are colored with time-averaged TE flow (inTE + outTE) within the last 0.2 second window using the Kraskov estimator. Edges are colored by the sum of corresponding transfer entropy in both directions. TEs are increasing when the network is being activated and richer dynamics emerge. After the network reaches a stable state (t = 2.5 s), the TEs activities decay as well.}
+	\label{fig:network_comparison}
+\end{figure*}
+
+A more thorough validation of the hypothesis is done activating the same network with different source-drain pairings. The graphical distance between source and drain in each repetition is controlled to be constant. Identical Mackey-Glass signals with arbitrary amplitude (\textbf{maybe another word like strength/ xxx parameter}) between $2-5 V$ are delivered to the network. The times when the key events take place are recorded and plotted as fig. \ref{fig:time_align}. \textbf{Wording HERE} With the current path formation time on the x-axis, times for other key events line up fairly well. When the amplitude is larger, the first current path will be formed earlier and similar for other events. With amplitude ? greater than 3.5V, the key events line up linearly. With small amplitudes, the activation takes more time and thus more fluctuations in the dynamics are captured. These fluctuations contributes to the outliers in the plot.
+
 
 % \paragraph{$\Delta G$}
 
@@ -369,7 +387,6 @@ The transition regime ends when most junctions are at high-conductance states (t
 
 % Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/time_align}
@@ -383,22 +400,24 @@ The transition regime ends when most junctions are at high-conductance states (t
 \end{figure}
 
 
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width = 0.8\paperwidth]{figure/time_network_comparison}
-	\caption{\textbf{Network information flow snapshots at different time points.}
-			Snapshots of the network are taken at time points before activation ($t = 0.5s$), when the first current path formation ($t=1.465s$), when the network finishes large scale activation ($t = 2s$) and when the network is stable with high collective conductance ($t = 2.5s$).
-			Nodes are colored with time-averaged TE flow (inTE + outTE) within the last 0.2 second window using the Kraskov estimator. Edges are colored by the sum of corresponding transfer entropy in both directions. TEs are increasing when the network is being activated and richer dynamics emerge. After the network reaches a stable state (t = 2.5 s), the TEs activities decay as well.}
-	\label{fig:network_comparison}
-\end{figure*}
 
 
 
 
-\subsection{Dual task}
-\textbf{Might change to a smaller amplitude. Here modularity peak at $t=10$, too small to capture TE.}
+\newpage
+\subsection{Pre activation task}
+
 
 Pre-activate the network with Mackey-Glass signal, extract the state from different time-points. Then do a non-linear signal transform on it. 
+
+Hypothesis: a network at certain modularity level (or initial modularity level) might do a better job in tasks.
+
+A 100 network is activated with Mackey-Glass signal. It's modularity time-series is shown in \ref{fig:pre_act_task}. As discussed in the result section, the modularity level of the network can somehow reflect the network's current state. Then the network's corresponding state (conductance and filament state) at times between $t = 0 - 2 s$ are extracted. Non-linear transformation task is then applied to the network starting from those extracted states. \textbf{x-axis in plot should be changed.}
+
+Fig. \ref{fig:pre_act_task}(b) shows that ...
+
+A t-test is done ....
+
 
 \begin{figure}[h]
 	\centering
