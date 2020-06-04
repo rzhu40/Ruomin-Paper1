@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  1 MAY 2020 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.2)  3 JUN 2020 23:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -337,102 +337,99 @@ Underfull \hbox (badness 1205) in paragraph at lines 137--138
 
 LaTeX Font Info:    Try loading font information for U+bbold on input line 151.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/bbold/Ubbold.fd) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/mpl_plot.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/graph_plot.png>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
  \OT1/cmr/m/it/10 b. Volt-age dis-tri-bu-tion[] \OT1/cmr/m/n/10 Volt-age dis-tri-bu-tion on
  []
 
 <figure/v_lam_cent.png, id=33, 724.50674pt x 589.0005pt>
 File: figure/v_lam_cent.png Graphic file (type png)
 <use figure/v_lam_cent.png>
-Package pdftex.def Info: figure/v_lam_cent.png  used on input line 276.
+Package pdftex.def Info: figure/v_lam_cent.png  used on input line 286.
 (pdftex.def)             Requested size: 246.0pt x 199.98788pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:i_cent' on page 3 undefined on input line 293.
 
-<figure/I_cent.png, id=34, 555.57562pt x 423.68288pt>
-File: figure/I_cent.png Graphic file (type png)
-<use figure/I_cent.png>
-Package pdftex.def Info: figure/I_cent.png  used on input line 287.
-(pdftex.def)             Requested size: 246.0pt x 187.59764pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figure/comm_cent.png, id=35, 579.06337pt x 419.166pt>
+<figure/comm_cent.png, id=34, 579.06337pt x 419.166pt>
 File: figure/comm_cent.png Graphic file (type png)
 <use figure/comm_cent.png>
-Package pdftex.def Info: figure/comm_cent.png  used on input line 309.
+Package pdftex.def Info: figure/comm_cent.png  used on input line 312.
 (pdftex.def)             Requested size: 246.0pt x 178.07603pt.
-[3 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/v_lam_cent.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/I_cent.png>]
-<figure/in_TE.png, id=42, 565.51276pt x 416.45587pt>
-File: figure/in_TE.png Graphic file (type png)
-<use figure/in_TE.png>
-Package pdftex.def Info: figure/in_TE.png  used on input line 319.
-(pdftex.def)             Requested size: 246.0pt x 181.1632pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[3 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/v_lam_cent.png>]
 
-LaTeX Warning: Reference `in_te' on page 4 undefined on input line 324.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 318.
 
-<figure/TE_cent_act.png, id=43, 565.51276pt x 417.35925pt>
+<figure/in_TE.png, id=40, 565.51276pt x 416.45587pt>
+File: figure/in_TE.png Graphic file (type png)
+<use figure/in_TE.png>
+Package pdftex.def Info: figure/in_TE.png  used on input line 326.
+(pdftex.def)             Requested size: 246.0pt x 181.1632pt.
+<figure/TE_cent_act.png, id=41, 565.51276pt x 417.35925pt>
 File: figure/TE_cent_act.png Graphic file (type png)
 <use figure/TE_cent_act.png>
-Package pdftex.def Info: figure/TE_cent_act.png  used on input line 328.
+Package pdftex.def Info: figure/TE_cent_act.png  used on input line 334.
 (pdftex.def)             Requested size: 246.0pt x 181.55617pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/time_series.png, id=44, 481.49887pt x 770.57887pt>
+<figure/EC_AIS.png, id=42, 525.76425pt x 418.26262pt>
+File: figure/EC_AIS.png Graphic file (type png)
+<use figure/EC_AIS.png>
+Package pdftex.def Info: figure/EC_AIS.png  used on input line 341.
+(pdftex.def)             Requested size: 246.0pt x 195.70271pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figure/time_series.png, id=43, 481.49887pt x 770.57887pt>
 File: figure/time_series.png Graphic file (type png)
 <use figure/time_series.png>
-Package pdftex.def Info: figure/time_series.png  used on input line 341.
+Package pdftex.def Info: figure/time_series.png  used on input line 353.
 (pdftex.def)             Requested size: 246.0pt x 393.69551pt.
 
-LaTeX Warning: Float too large for page by 8.44551pt on input line 348.
+LaTeX Warning: Float too large for page by 18.94551pt on input line 361.
 
 [4 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/comm_cent.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/in_TE.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 358.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 366.
 
-<figure/time_network_comparison.png, id=51, 1453.53038pt x 1453.53038pt>
+[5 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/TE_cent_act.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/EC_AIS.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_series.png>]
+<figure/time_align.png, id=56, 531.1845pt x 416.45587pt>
+File: figure/time_align.png Graphic file (type png)
+<use figure/time_align.png>
+Package pdftex.def Info: figure/time_align.png  used on input line 375.
+(pdftex.def)             Requested size: 246.0pt x 192.86836pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figure/time_network_comparison.png, id=57, 1453.53038pt x 1453.53038pt>
 File: figure/time_network_comparison.png Graphic file (type png)
 <use figure/time_network_comparison.png>
-Package pdftex.def Info: figure/time_network_comparison.png  used on input line 363.
+Package pdftex.def Info: figure/time_network_comparison.png  used on input line 387.
 (pdftex.def)             Requested size: 491.43787pt x 491.4436pt.
 
 Class revtex4-2 Warning: Float cannot be placed.
 
-[5 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/TE_cent_act.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_series.png>]
+<figure/benchmark.png, id=58, 1201.48875pt x 940.51375pt>
+File: figure/benchmark.png Graphic file (type png)
+<use figure/benchmark.png>
+Package pdftex.def Info: figure/benchmark.png  used on input line 419.
+(pdftex.def)             Requested size: 510.0pt x 399.21794pt.
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 371.
+Class revtex4-2 Warning: Float cannot be placed.
 
-<figure/time_align.png, id=57, 531.1845pt x 416.45587pt>
-File: figure/time_align.png Graphic file (type png)
-<use figure/time_align.png>
-Package pdftex.def Info: figure/time_align.png  used on input line 392.
-(pdftex.def)             Requested size: 246.0pt x 192.86836pt.
+[6 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_align.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figure/pre_act_task.png, id=58, 654.0435pt x 647.71988pt>
-File: figure/pre_act_task.png Graphic file (type png)
-<use figure/pre_act_task.png>
-Package pdftex.def Info: figure/pre_act_task.png  used on input line 424.
-(pdftex.def)             Requested size: 246.0pt x 243.61584pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 441.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 436.
 
 (/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.bbl
 Underfull \hbox (badness 2443) in paragraph at lines 132--138
  \OT1/cmr/m/n/9 Ex-per-i-ment \OT1/cmr/bx/n/9 2008\OT1/cmr/m/n/9 , 10.1088/1742-5468/2008/10/P10008
  []
 
-) [7] [8 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_network_comparison.png>] [9 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_align.png> </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/pre_act_task.png>] (/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.aux)
+) [7] [8 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/time_network_comparison.png>] [9 </Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/figure/benchmark.png (PNG copy)>] (/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -441,17 +438,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4663 strings out of 492616
- 62503 string characters out of 6129482
- 151422 words of memory out of 5000000
- 8470 multiletter control sequences out of 15000+600000
+ 4665 strings out of 492616
+ 62506 string characters out of 6129482
+ 153871 words of memory out of 5000000
+ 8472 multiletter control sequences out of 15000+600000
  19762 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,29p,1652b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,29p,1714b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on /Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf (9 pages, 1219602 bytes).
+Output written on /Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf (9 pages, 1352021 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
