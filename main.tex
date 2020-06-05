@@ -90,7 +90,7 @@ The cumulative current flow through nanowires shows a linear relationship with n
 	\label{fig:i_cent}
 \end{figure}
 
-\subsection{\label{sec:level2} Centrality and Functionality}
+\subsection*{Centrality and Functionality}
 
 \textbf{NOT sure if we want to keep communicability. Since COMM = $\sum G^k$}
 
@@ -137,7 +137,7 @@ Furthermore, fig. \ref{fig:EC_AIS} suggests that junctions with higher betweenne
 
 
 
-\subsection{Time-series analysis}
+\subsection*{Time-series analysis}
 
 \begin{figure}
 	\centering
@@ -203,7 +203,7 @@ A more thorough validation of the hypothesis is done activating the same network
 % Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
 
 
-\subsection{Pre activation task}
+\subsection*{Pre activation task}
 
 \begin{figure*}[]
 	\centering
@@ -238,7 +238,7 @@ The Discussion should be succinct and must not contain subheadings.
 
 \section*{Methods}
 
-\subsection{Graph Generalization}
+\subsection*{Graph Generalization}
 
 \textbf{Talk about how to map the original nanowire network on to a graph. Cite Zdenka here}.
 
@@ -256,7 +256,7 @@ The Discussion should be succinct and must not contain subheadings.
 	\label{fig:graph_plot}
 \end{figure}
 
-\subsection{\label{sec:level2} Simulation}
+\subsection*{\label{sec:level2} Simulation}
 When connected to external voltage biases, nanowire networks behave like traditional electrical networks. Each component in the network obeys Kirchhoff's law. Hence the voltage distribution across the network can be obtained by solving (\cite{Dorfler2018}):
 
 \begin{equation}
@@ -294,7 +294,7 @@ And $D$ is the weighted degree matrix generated from $W$:
 \end{align}
 
 
-\subsection{\label{sec:level2} Centrality}
+\subsection*{Centrality}
 Centrality \textbf{Put some reference here} is an important measure that helps understand the fundamental structures and connectivities of networks. Betweenness centrality of nodes and edges in networks can demonstrate .... Meanwhile, closeness centrality of nodes can be used to interpret the ..... \cite{Newman2010}.
 
 A variation of centrality measures based on current flow model proposed by Brandes and Fleischer \cite{Brandes2005} is employed here. As the electrical dynamics in our networks fall in the class of \textbf{random walks} (not sure about here).
@@ -318,7 +318,7 @@ The closeness centrality of a node in this context is structured in the same way
 \end{equation}
 In the context of a unit $st$-current in the network, $R(v,w)$ represents the effective resistance between nodes $v$ and $w$.
 
-\subsection{\label{sec:level2} Communicability}
+\subsection*{Communicability}
 Communicability in a network represents .... \cite{Estrada2008}. 
 
 In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $\mathbf M$ is generated to depict the communicability distribution, where $\mathbf M_{ij}$ represents the communicability between nodes $i$ and $j$. Therefore, $\mathbf M$ reads:
@@ -335,7 +335,7 @@ The communicability of a node can be defined as how communicable the node is to 
 
 
 
-\subsection{\label{sec:level2} Modularity}
+\subsection*{Modularity}
 Modularity is a network metric that ..... \textbf{talk about it here} \cite{Rubinov2009}.
 
 Recent studies in neuro-science demonstrated that modularity plays an important role in .... \textbf{talk about it here} \cite{Godwin2015}. 
@@ -352,7 +352,7 @@ Modularity ($\mathbf Q^w$) in a weighted network can be calculated by the Louvai
 
 in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
 
-\subsection{\label{sec:level2} Information Dynamics}
+\subsection*{Information Dynamics}
 
 Transfer entropy is an effective metric for information dynamics. It explains ..... \textbf{cite Joe here}.
 
@@ -389,7 +389,7 @@ The active information storage in context of edge voltage distribution is thus c
 
 .....
 
-\subsection{Benchmark}
+\subsection*{Benchmark}
 
 Regular reservoir computing realizations are typically initialized with homogeneous or randomly generated states. The system then evolves based on specific tasks. \textbf{WHY we want different initial states?}
 

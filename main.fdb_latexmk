@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1591351389 "main.aux" "main.bbl" "main" 1591351516
+["bibtex main"] 1591351670 "main.aux" "main.bbl" "main" 1591351698
   "./naturemag-doi.bst" 1591296594 36153 a59af0557a0f0c0e857533e984f737bb ""
-  "main.aux" 1591351516 19628 d3335437241ab7fbbb66a5acf72a0fd5 "pdflatex"
+  "main.aux" 1591351672 17360 d2c8b186f222ffa5b30e3b0ca0dbe02f "pdflatex"
   "paper1.bib" 1587006458 12835 ff91ecfa294a876ee49b69e5f9337def ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1591351514 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.pdf" "main" 1591351516
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.aux" 1591351516 19628 d3335437241ab7fbbb66a5acf72a0fd5 ""
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.tex" 1591351466 33965 cc7ed8424868be58120942ab1c7e73ec ""
-  "/dev/null" 1591351512 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1591351670 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.pdf" "main" 1591351698
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.aux" 1591351672 17360 d2c8b186f222ffa5b30e3b0ca0dbe02f ""
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.tex" 1591351697 33880 c50670ceef5d93dace5de1add659b1da ""
+  "/dev/null" 1591351662 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -171,15 +171,15 @@
   "jabbrv-ltwa-all.ldf" 1591296594 49107 ef89484545be005458b7162f37634c99 ""
   "jabbrv-ltwa-en.ldf" 1591296594 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1591296594 15480 2106da179daf9d5a102407956ba23e0c ""
-  "main.aux" 1591351516 19628 d3335437241ab7fbbb66a5acf72a0fd5 "pdflatex"
-  "main.bbl" 1591351389 3301 cb2eb0b66b596a738b13fa0c2c3a1178 "bibtex main"
-  "main.out" 1591351516 619 8dcdbed3921cf532848d50135e8b3cea "pdflatex"
-  "main.tex" 1591351466 33965 cc7ed8424868be58120942ab1c7e73ec ""
+  "main.aux" 1591351672 17360 d2c8b186f222ffa5b30e3b0ca0dbe02f "pdflatex"
+  "main.bbl" 1591351670 3301 cb2eb0b66b596a738b13fa0c2c3a1178 "bibtex main"
+  "main.out" 1591351672 49 cafbc6a0af0b640488ec7251e6554d82 "pdflatex"
+  "main.tex" 1591351697 33880 c50670ceef5d93dace5de1add659b1da ""
   "wlscirep.cls" 1591296594 5788 9df2749839c3a8af12c7b5623dab1715 ""
   (generated)
   "main.pdf"
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.log"
-  "main.out"
   "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.pdf"
-  "main.aux"
+  "main.out"
   "main.log"
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/main.log"
+  "main.aux"
