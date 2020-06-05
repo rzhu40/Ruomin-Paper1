@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex paper1"] 1591190597 "paper1.aux" "paper1.bbl" "paper1" 1591191177
+["bibtex paper1"] 1591319096 "paper1.aux" "paper1.bbl" "paper1" 1591319098
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1547851249 69612 d43c8740409d8c756864ce4e3d57a214 ""
-  "paper1.aux" 1591191176 11061 618c26023928dd74250625870af1633c "pdflatex"
+  "paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 "pdflatex"
   "paper1.bib" 1587006458 12835 ff91ecfa294a876ee49b69e5f9337def ""
-  "paper1Notes.bib" 1591191176 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "paper1Notes.bib" 1591319097 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
   "paper1.blg"
   "paper1.bbl"
-["pdflatex"] 1591191174 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf" "paper1" 1591191177
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.aux" 1591191176 11061 618c26023928dd74250625870af1633c ""
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" 1591191174 30241 d796604c3db8edd2b638e790a612fdaf ""
+["pdflatex"] 1591319096 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf" "paper1" 1591319098
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 ""
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" 1591319094 33503 434689ceabc4c406a44431eb6f5e21f7 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -127,6 +127,7 @@
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1585792913 4259635 9eb5c248684e3952e51a5f5ed30093ba ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
   "figure/EC_AIS.png" 1591160001 41222 64bcb118082bdb4edb92665306fac396 ""
+  "figure/I_cent.png" 1586402384 35025 57125cafe1ccebeeea7e68aeb62db4a9 ""
   "figure/TE_cent_act.png" 1587989410 112440 5cc84d563357ae51b12bf4ddda7a28c3 ""
   "figure/benchmark.png" 1590990704 178468 7c3e58ebaffb4db985b37bbb0071677c ""
   "figure/comm_cent.png" 1588298683 35373 b2816b36fccec0ea6fe71e37bb57387a ""
@@ -137,13 +138,13 @@
   "figure/time_network_comparison.png" 1588290605 462062 279c6e2a6296c2c169e70a52123f0005 ""
   "figure/time_series.png" 1587711272 62736 fe44ae118cfaedc0af9e99f877d37ebf ""
   "figure/v_lam_cent.png" 1586402444 79182 16ee5ecd4284f249d30b12073b7f5703 ""
-  "paper1.aux" 1591191176 11061 618c26023928dd74250625870af1633c "pdflatex"
-  "paper1.bbl" 1591190597 7137 3ed88c4e239ccde43d611bf42b5942b7 "bibtex paper1"
-  "paper1.tex" 1591191174 30241 d796604c3db8edd2b638e790a612fdaf ""
+  "paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 "pdflatex"
+  "paper1.bbl" 1591319096 7137 3ed88c4e239ccde43d611bf42b5942b7 "bibtex paper1"
+  "paper1.tex" 1591319094 33503 434689ceabc4c406a44431eb6f5e21f7 ""
   (generated)
   "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.log"
-  "paper1.aux"
-  "paper1.pdf"
   "paper1.log"
-  "paper1Notes.bib"
+  "paper1.pdf"
   "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf"
+  "paper1.aux"
+  "paper1Notes.bib"
