@@ -1,0 +1,73 @@
+\providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
+\begin{thebibliography}{1}
+\urlstyle{rm}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname doiprefix\endcsname\relax\def\doiprefix{DOI: }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Dorfler2018}
+\bibinfo{author}{Dorfler, F.}, \bibinfo{author}{Simpson-Porco, J.~W.} \&
+  \bibinfo{author}{Bullo, F.}
+\newblock \bibinfo{title}{{Electrical Networks and Algebraic Graph Theory:
+  Models, Properties, and Applications}},
+  \doiprefix\url{10.1109/JPROC.2018.2821924} (\bibinfo{year}{2018}).
+
+\bibitem{Newman2010}
+\bibinfo{author}{Newman, M.}
+\newblock \emph{\bibinfo{title}{{Networks: An Introduction}}}
+  (\bibinfo{year}{2010}).
+
+\bibitem{Brandes2005}
+\bibinfo{author}{Brandes, U.} \& \bibinfo{author}{Fleischer, D.}
+\newblock \bibinfo{title}{{Centrality measures based on current flow}}.
+\newblock In \emph{\bibinfo{booktitle}{Lecture Notes in Computer Science}},
+  vol. \bibinfo{volume}{3404}, \bibinfo{pages}{533--544},
+  \doiprefix\url{10.1007/978-3-540-31856-9_44} (\bibinfo{year}{2005}).
+
+\bibitem{Estrada2008}
+\bibinfo{author}{Estrada, E.} \& \bibinfo{author}{Hatano, N.}
+\newblock \bibinfo{title}{{Communicability in complex networks}}.
+\newblock \bibinfo{type}{Tech. Rep.} \bibinfo{number}{3}
+  (\bibinfo{year}{2008}).
+\newblock \doiprefix\url{10.1103/PhysRevE.77.036111}.
+
+\bibitem{Crofts2009}
+\bibinfo{author}{Crofts, J.~J.} \& \bibinfo{author}{Higham, D.~J.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{A weighted communicability measure
+  applied to complex brain networks}}}.
+\newblock {\emph{\JournalTitle{Journal of the Royal Society Interface}}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{411--414},
+  \doiprefix\url{10.1098/rsif.2008.0484} (\bibinfo{year}{2009}).
+
+\bibitem{Rubinov2009}
+\bibinfo{author}{Rubinov, M.} \& \bibinfo{author}{Sporns, O.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{Complex network measures of brain
+  connectivity: Uses and interpretations}}}.
+\newblock {\emph{\JournalTitle{NeuroImage}}} \textbf{\bibinfo{volume}{52}},
+  \bibinfo{pages}{1059--1069}, \doiprefix\url{10.1016/j.neuroimage.2009.10.003}
+  (\bibinfo{year}{2009}).
+
+\bibitem{Godwin2015}
+\bibinfo{author}{Godwin, D.}, \bibinfo{author}{Barry, R.~L.} \&
+  \bibinfo{author}{Marois, R.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{Breakdown of the brain's
+  functional network modularity with awareness}}}.
+\newblock {\emph{\JournalTitle{Proceedings of the National Academy of Sciences
+  of the United States of America}}} \textbf{\bibinfo{volume}{112}},
+  \bibinfo{pages}{3799--3804}, \doiprefix\url{10.1073/pnas.1414466112}
+  (\bibinfo{year}{2015}).
+
+\bibitem{Blondel2008}
+\bibinfo{author}{Blondel, V.~D.}, \bibinfo{author}{Guillaume, J.~L.},
+  \bibinfo{author}{Lambiotte, R.} \& \bibinfo{author}{Lefebvre, E.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{Fast unfolding of communities in
+  large networks}}}.
+\newblock {\emph{\JournalTitle{Journal of Statistical Mechanics: Theory and
+  Experiment}}} \textbf{\bibinfo{volume}{2008}},
+  \doiprefix\url{10.1088/1742-5468/2008/10/P10008} (\bibinfo{year}{2008}).
+\newblock \eprint{0803.0476}.
+
+\end{thebibliography}
