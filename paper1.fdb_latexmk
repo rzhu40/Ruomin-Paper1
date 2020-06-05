@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex paper1"] 1591319096 "paper1.aux" "paper1.bbl" "paper1" 1591319098
+["bibtex paper1"] 1591319096 "paper1.aux" "paper1.bbl" "paper1" 1591319113
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1547851249 69612 d43c8740409d8c756864ce4e3d57a214 ""
   "paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 "pdflatex"
   "paper1.bib" 1587006458 12835 ff91ecfa294a876ee49b69e5f9337def ""
   "paper1Notes.bib" 1591319097 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
-  "paper1.blg"
   "paper1.bbl"
-["pdflatex"] 1591319096 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf" "paper1" 1591319098
+  "paper1.blg"
+["pdflatex"] 1591319096 "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf" "paper1" 1591319113
   "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 ""
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" 1591319094 33503 434689ceabc4c406a44431eb6f5e21f7 ""
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.tex" 1591319112 33503 434689ceabc4c406a44431eb6f5e21f7 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -140,11 +140,11 @@
   "figure/v_lam_cent.png" 1586402444 79182 16ee5ecd4284f249d30b12073b7f5703 ""
   "paper1.aux" 1591319097 11328 3742f1bd45bb047af19bdd26157a72e9 "pdflatex"
   "paper1.bbl" 1591319096 7137 3ed88c4e239ccde43d611bf42b5942b7 "bibtex paper1"
-  "paper1.tex" 1591319094 33503 434689ceabc4c406a44431eb6f5e21f7 ""
+  "paper1.tex" 1591319112 33503 434689ceabc4c406a44431eb6f5e21f7 ""
   (generated)
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.log"
-  "paper1.log"
-  "paper1.pdf"
-  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf"
-  "paper1.aux"
   "paper1Notes.bib"
+  "paper1.log"
+  "paper1.aux"
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.log"
+  "/Users/rzhu/Documents/PhD/writing/Ruomin-Paper1/paper1.pdf"
+  "paper1.pdf"
