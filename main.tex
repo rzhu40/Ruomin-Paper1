@@ -44,7 +44,7 @@ The Introduction section, of referenced text expands on the background of the wo
 
 \begin{itemize}
 	\item Do we need the current flux vs node centrality? (basically a straight line) [Nah. Just state node current increases linearly with centrality.]
-	\item Do we need communicability? Since COMM = $\sum G^k$ in my definition.	[Probably not - we have more than enough results and I don't think this adds anything.]
+	\item Do we need communicability? Since COMM = $\sum G^k$ in my definition.	[Probably not - we have more than enough results and I don't think this adds anything. Can go in SUPP]
 	\item  For the coloring of TE scatter, ON time might be a more straight forward scheme, e.g. the color-way in AIS vs centrality plot. [Yes, to be consistent and especially if we don't include common. Also, this will combine fig 6 \& 7 into one plot, which is better.]
 	\item How to name different regimes of activation and what will be the time points to distinguish them. [How about: pre-activation, activation and post-activation?]
 	\item What will be the best incentive for different initial states in benchmarking. (As far as I know, most of the reservoir computing realizations are based on homogeneous or randomly generated initial states. This pre-activated way might be a good alternative.)[Let's ask Joe - he and Mac and Mike were looking into this with ANNs as there is now some literature on pre-activating ANNs (but not ESNs/RC networks ).]
@@ -59,52 +59,65 @@ The Introduction section, of referenced text expands on the background of the wo
 
 \textbf{Talk about the sim settings and the network being used.}
 
-As the network is being activated, junction filament states will grow faster at more ``central" positions. A winner-takes-all current path \textbf{Cite Dublin paper} will form at the most central nodes first, then branch out to the rest of the network. At a specific time $t$, current-flow betweenness centrality of junctions can be determined by Eq. \ref{eq:ebc}. Junctions with higher centrality are more likely to exhibit higher voltage and filament state. Voltage ($\vec{V_e}$) and filament state ($\vec{\lambda}$) are strongly coupled on the junctions; higher voltage on a junction will lead to faster growth of its filament state. In return, a higher filament state means the junction will have a higher conductance (\textbf{refer to equation here}), and an increased chance to reach higher voltage.
+\textbf{ZK: The first para can be a short preamble to briefly introduce the network model (referring to methods for details) and describe the numerical experiments presented below (without yet mentioning the results. Return to this after Results section draft is done.}
+
+
+As the network activates, junctions at more central locations in the network evolve faster. A winner-takes-all (WTA) current path \textbf{Cite Dublin paper} form at the most central nodes first, followed by additional current paths branch out to the rest of the network. At a specific time $t$, current-flow betweenness centrality of junctions is determined by Eq. \ref{eq:ebc}. Junctions with higher centrality are more likely to receive higher voltage. Voltage ($\vec{V_e}$) and conductance are strongly coupled on the junctions; higher voltage on a junction leads to faster evolution of its conductantce state.
+In return, a higher conductance state means the junction is more likely to receive a higher voltage (\textbf{refer to equation here}).\textbf{[ZK: I think it's more complex than this due to topology - the voltage distribution changes adaptively in response to junction state changes.]}
 
 % Among all sorts of metrics, voltage distribution on nodes $\vec{V_n}$ and on edges $\vec{V_e}$ would be the most interesting ones since the change rate of conductances exhibited by edges are determined by $\vec{V_e}$. Meanwhile changes of conductance at edges will lead to a redistribution of voltage across the voltage.
 
-\paragraph{Filament state}
+\subsection*{Junction centrality and information spread}
 
-The absolute values of filament states $|\vec{\lambda}(t)|$ as a function of edge current-flow betweenness centrality are plotted on Fig. \ref{fig:v_lam_cent}, colored by corresponding conductance. The plot shows that junctions at more central positions will have faster filament growth. **  \textbf{[Alon - this is repeating]} The color spectrum on the plot demonstrates the conductance transition of junctions based on their filament states.\textbf{JOEL: could refer to this as an increase in tunnelling conductance or transition to ballistic conductance.} High centrality junctions have significantly higher conductance since their filament states are greater than the threshold [ \textbf{Alon - do you mention threshold earlier? talk about threshold or ref]}. Consequently, these junctions are preferred during formation of the first current path.
+\paragraph{Junction state and network information flow.}
 
-\paragraph{Voltage distribution} 
+% The absolute values of filament states $|\vec{\lambda}(t)|$ as a function of edge current-flow betweenness centrality are plotted on Fig. \ref{fig:v_lam_cent}, colored by corresponding conductance. The plot shows that junctions at more central positions will have faster filament growth. **  \textbf{[Alon - this is repeating]} The color spectrum on the plot demonstrates the conductance transition of junctions based on their filament states.\textbf{JOEL: could refer to this as an increase in tunnelling conductance or transition to ballistic conductance.} High centrality junctions have significantly higher conductance since their filament states are greater than the threshold [ \textbf{Alon - do you mention threshold earlier? talk about threshold or ref]}. Consequently, these junctions are preferred during formation of the first current path.
 
-Voltage distribution on junctions $|\vec{V_e}|(t)$ as a function of centrality is also included in fig. \ref{fig:v_lam_cent}. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
+%\paragraph{Voltage distribution} 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figure/v_lam_cent}
-	\caption{Absolute values of voltage and filament as a function of centrality at T = ?? s. Current path was formed at ??. The data points are colored based on the junctions' corresponding conductance. \textbf{ASK Zdenka. Maybe junction on time will be a more obvious metric.}}
-	\label{fig:v_lam_cent}
-\end{figure}
+% Voltage distribution on junctions $|\vec{V_e}|(t)$ as a function of centrality is also included in fig. \ref{fig:ebc+nw}. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
 
-\paragraph{Current flow}
-\textbf{Not sure if we have  to keep this}
-The cumulative current flow through nanowires shows a linear relationship with node current flow betweenness centrality. 
-% fig. \ref{fig:i_cent}.
+Voltage distribution on junctions $|\vec{V_e}|(t)$ as a function of centrality at $t = 1.7$s is plotted in Fig. \ref{fig:ebc+nw} where the color code represents each junction's corresponding conductance. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
+
+The right panel of Fig. \ref{fig:ebc+nw} shows the corresponding snapshot of the network at $t = 1.7\,$s. The WTA pathway formed earlier (at $t = 1.465 \,$s) is represented by orange nodes. The edges are colored based on their corresponding conductance in log scale. The positions of high-conductance junctions beside the WTA pathway demonstrate the importance of centrality - the junctions at more central positions are turned on earlier.
+
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figure/I_cent}
-	\caption{Current flow on a nanowire vs node centrality}
-	\label{fig:i_cent}
+%	\includegraphics[width=0.5\linewidth]{figure/v_lam_cent}
+	\includegraphics[width=0.8\linewidth]{figure/ebc+nw}
+	\caption{Left -- Voltage magnitude and conductance across network junctions as a function of their current betweenness centrality at $t = 1.7\,$s. Right -- corresponding snapshot of network graph, showing the first current path (between orange nodes) established earlier, at $t = 1.7\,$s. Dashed edges denote junctions still in an "off" (high resistance) state.}
+	\label{fig:ebc+nw}
 \end{figure}
 
-\subsection*{Centrality and Functionality}
+% \paragraph{Current flow}
+% \textbf{Not sure if we have  to keep this}
+% The cumulative current flow through nanowires shows a linear relationship with node current flow betweenness centrality. 
+% % fig. \ref{fig:i_cent}.
 
-\textbf{NOT sure if we want to keep communicability. Since COMM = $\sum G^k$}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.5\linewidth]{figure/I_cent}
+% 	\caption{Current flow on a nanowire vs node centrality}
+% 	\label{fig:i_cent}
+% \end{figure}
 
-\textbf{WORDING HERE as well.} Intuitively one would think certain nodes in the network will have a more important role for specific functionalities \textbf{[Alon - based on what intuition? maybe citation?][Good question, need to think about it ]}. Here analysis of the network's functionality such as communicability and transfer entropy are presented. The results suggest that more central wires (\textbf{Be explicit about more central: higher centrality.}) and junctions have higher importance in information dynamics ...\textbf{MAYBE communicability}.  
+% \subsection*{Centrality and Functionality}
 
-The communicability of nodes at $t$ can be calculated based on eq. \ref{eq:ncomm}. At an arbitrary time point during the activation (Right after first current path formation here ), when plotted as a function of current-flow closeness centrality on log-log scale, communicability shows as a close to exponential curve, indicating that the nodes at more central positions are more communicable to the rest of the network as this time point. 
+% \textbf{NOT sure if we want to keep communicability. Since COMM = $\sum G^k$}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figure/comm_cent}
-	\caption{\textbf{Node communicability vs closeness centrality at $t = 2 s$.} Node communicability is calculated by eq. \ref{eq:ncomm}. Closeness centrality is calculated by eq. \ref{eq:ecc}. The plot is done on log-log scale. As the nodes at more central positions are having much higher communicabilities (and higher conductance). And the other nodes follows a close to linear trend.}
-	\label{fig:comm_cent}
-\end{figure}
+% \textbf{WORDING HERE as well.} Intuitively one would think certain nodes in the network will have a more important role for specific functionalities \textbf{[Alon - based on what intuition? maybe citation?][Good question, need to think about it ]}. Here analysis of the network's functionality such as communicability and transfer entropy are presented. The results suggest that more central wires (\textbf{Be explicit about more central: higher centrality.}) and junctions have higher importance in information dynamics ...\textbf{MAYBE communicability}.  
 
+% The communicability of nodes at $t$ can be calculated based on eq. \ref{eq:ncomm}. At an arbitrary time point during the activation (Right after first current path formation here ), when plotted as a function of current-flow closeness centrality on log-log scale, communicability shows as a close to exponential curve, indicating that the nodes at more central positions are more communicable to the rest of the network as this time point. 
+
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.5\linewidth]{figure/comm_cent}
+% 	\caption{\textbf{Node communicability vs closeness centrality at $t = 2 s$.} Node communicability is calculated by eq. \ref{eq:ncomm}. Closeness centrality is calculated by eq. \ref{eq:ecc}. The plot is done on log-log scale. As the nodes at more central positions are having much higher communicabilities (and higher conductance). And the other nodes follows a close to linear trend.}
+% 	\label{fig:comm_cent}
+% \end{figure}
+
+\paragraph{Transfer entropy -- information exchange.}
 The node closeness centrality also shows an interesting correlation with transfer entropy. For any node in the network, the out-TE is considered as the average transfer entropy measured from the node to its neighbors. Oppositely, the in-TE is defined as the transfer entropy from all neighbors to the node. \textbf{(Have to write equations to define in and out)}. With 50 repetitions of different source/target node pairings (while the graphical distance in between is kept constant), TE averaged across the whole time-series shows a close-to-linear relationship with centrality on a semi-logy scale in Fig. \ref{fig:in_te}. Centrality here is calculated at $t = 0\,$s, and therefore reflects the influence of the structural properties of the network (as all junctions have equal weights at $t = 0$s). Nodes at more central positions have the potential to send out and take in more information and exhibit richer dynamics (\textbf{might have to explain about "richer"}).
 
 Fig. \ref{fig:TE_cent_act} shows the in-TE vs closeness centrality around the time of formation of winner-takes-all current path ($T = ..$ here). On a semi-logy scale, the high centrality nodes exhibit high TE and communicability. At $T = ..$, these nodes are connected to junctions that are already turned ON. On the other hand, the group at the left of the figure consists of low centrality nodes \textbf{[Alon - i feel like a sentence is missing explaining this, and connecting to the next sentence]}. Within this regime, nodes with higher centralities are more likely to have larger TE. The transition from low TE to high TE with respect to centrality increase validates the analysis in fig. \ref{fig:in_te}.
@@ -115,30 +128,31 @@ Furthermore, fig. \ref{fig:EC_AIS} suggests that junctions with higher betweenne
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figure/in_TE}
-	\caption{\textbf{Might not need color here. Node in-TE as a function of centrality. (Out TE in  supplement)} 50 repetitions with different source-drain pairings on the same 100 nw network are plotted. Each data point represent one junction in one repetition. TE is averaged across the whole time-series. Node centrality is calculated based on the current-flow closeness algorithm at $t = 0$. Communicability is calculated by Eq \textbf{equation} at $t = 0$ as well. All the source-drain pairings are controlled to have same graphical distance. Identical Mackey-Glass signals are applied to these simulations to activate the network. Each data point on the plot represent one node in one simulation. A close to linear correlation between TE and centrality can be determined from the plot, which means nodes with higher centralities tend to have richer dynamics for taking in and sending out information.
+	\includegraphics[width=0.45\linewidth]{figure/in_TE}
+	\includegraphics[width=0.45\linewidth]{figure/TE_cent_act}
+	\caption{\textbf{Might not need color here. Node in-TE as a function of centrality. (Out TE in  supplement) ZK: I put these together. Can you make them the same scale to compare more easily, showing TE and cc increase at activation time.} 50 repetitions with different source-drain pairings on the same 100 nw network are plotted. Each data point represent one junction in one repetition. TE is averaged across the whole time-series. Node centrality is calculated based on the current-flow closeness algorithm at $t = 0$. Communicability is calculated by Eq \textbf{equation} at $t = 0$ as well. All the source-drain pairings are controlled to have same graphical distance. Identical Mackey-Glass signals are applied to these simulations to activate the network. Each data point on the plot represent one node in one simulation. A close to linear correlation between TE and centrality can be determined from the plot, which means nodes with higher centralities tend to have richer dynamics for taking in and sending out information.
 	\textbf{Intrinsic property of the network that does not have any dynamics. We have structural information here.}}
 	\label{fig:in_te}
 \end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figure/TE_cent_act}
-	\caption{\textbf{In-TE vs closeness centrality around activation.} The same activation test is done as fig. \ref{fig:in_te}.	TE is averaged in a $0.2s$ window right before the activation (mainly to cancel out the randomness). Centrality is measured at the current path formation time.}
-	\label{fig:TE_cent_act}
-\end{figure}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.5\linewidth]{figure/TE_cent_act}
+% 	\caption{\textbf{In-TE vs closeness centrality around activation.} The same activation test is done as fig. \ref{fig:in_te}.	TE is averaged in a $0.2s$ window right before the activation (mainly to cancel out the randomness). Centrality is measured at the current path formation time.}
+% 	\label{fig:TE_cent_act}
+% \end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figure/EC_AIS.png}
-	\caption{Active information storage of junctions as function of betweenness centrality.}
-	\label{fig:EC_AIS}
-\end{figure}
-
-
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.5\linewidth]{figure/EC_AIS.png}
+% 	\caption{Active information storage of junctions as function of betweenness centrality.}
+% 	\label{fig:EC_AIS}
+% \end{figure}
 
 
-\subsection*{Time-series analysis}
+
+
+\subsection*{Neuromorphic information dynamics and learning}
 
 \begin{figure}
 	\centering
@@ -152,6 +166,7 @@ Furthermore, fig. \ref{fig:EC_AIS} suggests that junctions with higher betweenne
 	\label{fig:time_series}
 \end{figure}
 
+\paragraph{Network time series.}
 Time series analysis of the network's activation can be even more intriguing. Fig. \ref{fig:time_series}(a) shows the network's collective conductance (\textbf{maybe network conductance}) time-series. The activation of the network mainly have three regimes - the resting (\textbf{maybe another word} ?ground ?low-conductance) regime, the transition regime and the stable (?equilibrium JOEL ?high-conductance) regime. Key events during the activation coincide with each other as a function of time. 
 
 In the resting regime, all junctions are OFF. Collective conductance of the network remains low. Filament states on junctions start to grow based on their voltage. Increase of conductance will first take place at junctions with higher centralities (voltages). Information flow is high when the signal first applied to the network, but in general at a low level in this regime. The modularity level stays constant since all junctions are at low-conductance state. A peak in modularity will then emerge when several junctions in the network starts to have higher conductances as they are forming "highlands" (\textbf{need proper explanation here}). When more junctions experience conductance increase, modularity starts to drop.
@@ -206,7 +221,7 @@ A more thorough validation of the hypothesis is done activating the same network
 % Modularity of the network is calculated throughout the activation. The drop of Modularity coincide with $\Delta G$ as well. 
 
 
-\subsection*{Pre activation task}
+%\subsection*{Pre activation task}
 
 \begin{figure*}[]
 	\centering
@@ -219,8 +234,9 @@ A more thorough validation of the hypothesis is done activating the same network
 	\label{fig:benchmark}
 \end{figure*}
 
-
+\paragraph{Network pre--activation -- memory capacity and learning}
 \textbf{Why we care about different initial states?} 
+\textbf{[ZK: do you have learning results without pre-activation?]}
 
 The same 100-nanowire network is activated with Mackey-Glass signal.(\textbf{Ref here}) The states of the network at different stages during the activation process are extracted and employed as initial states for benchmarks tasks. Memory capacity and non-linear transformation are used to test the network's performance at different activation levels (details in method part). 
 
