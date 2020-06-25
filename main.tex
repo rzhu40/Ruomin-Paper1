@@ -7,6 +7,14 @@
 \usepackage{bm}% bold math
 \usepackage{bbold}
 
+%%% user-defined macros
+\newcommand{\Vj}{V_{\rm j}}
+\newcommand{\cNB}{c_{\scriptscriptstyle \rm NB}}
+\newcommand{\cEB}{c_{\scriptscriptstyle \rm EB}}
+\newcommand{\gtapprox}{\raisebox{-0.5ex}{$\,\stackrel{>}{\scriptstyle \sim}\,$}}
+\newcommand{\ltapprox}{\raisebox{-0.5ex}{$\,\stackrel{<}{\scriptstyle \sim}\,$}}
+%%%
+
 \title{Information dynamics in neuromorphic nanowire networks}
 
 \author[1,*]{Alice Author}
@@ -58,13 +66,10 @@ The Introduction section, of referenced text expands on the background of the wo
 \clearpage
 \section*{Results}
 
-\textbf{Include some explanation about the network's activation under DC signal. And the fact most of the analysis are done with snapshots.}
+\textbf{Include some explanation about the network's activation under DC signal. And the fact most of the analysis are done with snapshots. ZK: The first para can be a short preamble to briefly introduce the network model (referring to methods for details) and describe the numerical experiments presented below (without yet mentioning the results. Return to this after Results section draft is done.}
 
 
-\textbf{ZK: The first para can be a short preamble to briefly introduce the network model (referring to methods for details) and describe the numerical experiments presented below (without yet mentioning the results. Return to this after Results section draft is done.}
-
-
-As the network activates, junctions at more central locations in the network evolve faster. A winner-takes-all (WTA) current path \textbf{(Cite Dublin paper)} form at the most central nodes first, followed by additional current paths branch out to the rest of the network. At a specific time $t$, current-flow betweenness centrality of junctions is determined by Eq. \ref{eq:ebc}. Junctions with higher centrality are more likely to receive higher voltage. Voltage ($\vec{V_e}$) and conductance are strongly coupled on the junctions; higher voltage on a junction leads to faster evolution of its conductance state.
+As the network activates, junctions at more central locations in the network evolve faster. A winner-takes-all (WTA) current path \textbf{(Cite Dublin paper) ZK: and Maass 2000, On the computational power of WTA} form at the most central nodes first, followed by additional current paths branch out to the rest of the network. At a specific time $t$, current-flow betweenness centrality of junctions is determined by Eq. \ref{eq:ebc}. Junctions with higher centrality are more likely to receive higher voltage. Voltage ($\vec{V_e}$) and conductance are strongly coupled on the junctions; higher voltage on a junction leads to faster evolution of its conductance state.
 In return, a higher conductance state means the junction is more likely to receive a higher voltage (\textbf{refer to equation here}).\textbf{[ZK: I think it's more complex than this due to topology - the voltage distribution changes adaptively in response to junction state changes.]}
 
 % Among all sorts of metrics, voltage distribution on nodes $\vec{V_n}$ and on edges $\vec{V_e}$ would be the most interesting ones since the change rate of conductances exhibited by edges are determined by $\vec{V_e}$. Meanwhile changes of conductance at edges will lead to a redistribution of voltage across the voltage.
@@ -77,19 +82,20 @@ In return, a higher conductance state means the junction is more likely to recei
 
 %\paragraph{Voltage distribution} 
 
-% Voltage distribution on junctions $|\vec{V_e}|(t)$ as a function of centrality is also included in fig. \ref{fig:ebc+nw}. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
+% Voltage distribution on junctions $|\vec{V_e}|(t)$ as a function of centrality is also included in fig. \ref{fig:ebc_nw}. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
 
-Voltage distribution on junctions $|\vec{V}_e|(t)$ as a function of centrality at $t = 1.7$s is plotted in the left panel of Fig. \ref{fig:ebc+nw} where the color code represents each junction's corresponding conductance. The data points can be clearly classified into three regimes: The two linear regimes at the left and right ends correspond to the OFF and ON junctions. The transition regime in the middle consists of the junctions whose conductance are in transient between low and high \textbf{[Alon -  wording here doesn't sound right][Ru - I guess still need some suggestions here]}. Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
+The distribution of voltage magnitude across junctions $|\Vj|(t)$ as a function of edge betweenness centrality $\cEB (t)$ at $t = 1.7$s is shown in Fig.~\ref{fig:ebc_nw} (left panel), with color indicating each junction's conductance state. Three regimes can be clearly identified: (i) an extensive linear regime spanning approximately 4 orders of magnitude in both $\Vj$ and $\cEB$ characterized by low conductance ($\ltapprox 10^{-6}\,$S) states, corresponding to junctions in an "OFF" state; (ii) a shorter transition regime with intermediate conductance values ($10^{-4} - 10^{-5}\,$S), corresponding to junctions in the tunneling regime; and (iii) a short linear regime characterized by high conductance ($\gtapprox 10^{-5}\,$S) states, corresponding to junctions that have switched "ON" and carry current.
+%Within each regime, junctions with higher centrality will have higher voltage. Earlier current paths consist of these higher centrality junctions.
 
-The right panel of Fig. \ref{fig:ebc+nw} shows the corresponding snapshot of the network at $t = 1.7\,$s. The WTA pathway formed earlier (at $t = 1.465 \,$s) is represented by orange nodes. The edges are colored based on their corresponding conductance in log scale. The positions of high-conductance junctions beside the WTA pathway demonstrate the importance of centrality - the junctions at more central positions are turned on earlier.
+The right panel of Fig.~\ref{fig:ebc_nw} shows the corresponding snapshot of the network graph at $t = 1.7\,$s. The orange nodes indicate the first current transport path, formed earlier at $t = 1.465 \,$s. This WTA path coincides with the shortest path length between the source and drain nodes. The edges are colored based on their corresponding conductance using the same log scale as in the $\Vj - \cEB$ plot. The locations of high-conductance junctions beside the WTA pathway demonstrate the importance of centrality -- junctions at more central locations switch on earlier and thus regulate the subsequent dynamics of information spread by current. This clearly demonstrates how the interplay between network topology and junction dynamics results in adaptive information flow.
 
 
 \begin{figure}[h]
 	\centering
 %	\includegraphics[width=0.5\linewidth]{figure/v_lam_cent}
-	\includegraphics[width=0.8\linewidth]{figure/ebc+nw}
-	\caption{Left -- Voltage magnitude and conductance across network junctions as a function of their current betweenness centrality at $t = 1.7\,$s. Right -- corresponding snapshot of network graph, showing the first current path (between orange nodes) established earlier, at $t = 1.7\,$s. Dashed edges denote junctions still in an "off" (high resistance) state.}
-	\label{fig:ebc+nw}
+	\includegraphics[width=0.8\linewidth]{figure/ebc_nw}
+	\caption{Left -- Voltage magnitude and conductance across network junctions as a function of their current betweenness centrality at $t = 1.7\,$s. Right -- corresponding snapshot of network graph, showing the first current path (between orange nodes) established earlier, at $t = 1.465\,$s. Edge colour denotes junction conductance state.}
+	\label{fig:ebc_nw}
 \end{figure}
 
 % \paragraph{Current flow}
@@ -120,9 +126,11 @@ The right panel of Fig. \ref{fig:ebc+nw} shows the corresponding snapshot of the
 % \end{figure}
 
 \paragraph{Transfer entropy -- information exchange.}
-The node closeness centrality also shows an interesting correlation with transfer entropy. For any node in the network, the out-TE is considered as the average transfer entropy measured from the node to its neighbors. Oppositely, the in-TE is defined as the transfer entropy from all neighbors to the node. \textbf{(Have to write equations to define in and out)}. Simulations of the same 100-nanowire network's activation subject to Mackey-Glass signal with 50 different source-drain pairings (the graphical distance in-between is kept constant) are performed. In-TE averaged across the whole time-series for all nodes in these 50 simulations are plotted in the left panel of Fig. \ref{fig:TE_combined} with respect to the corresponding closeness centrality. The closeness centrality is calculated at $t = 0\,$s to reflect the structural properties of the network's topology since the weights on all edges are equal. The color code represents the communicability of nodes at $t = 0\,$s \textbf{(might not need it, ref to COMM equation if necessary.)}. A close-to-linear relationship can be observed on semi-logy scale, where the dashed red line stands for the best fit. Nodes at more central positions have the potential to send out and take in more information and exhibit richer dynamics. (\textbf{might have to explain about "richer"}).
+The node betweenness centrality $\cNB$ shows an interesting correlation with transfer entropy. For any node in the network, the out-TE is considered as the average transfer entropy measured from the node to its neighbors. Oppositely, the in-TE is defined as the transfer entropy from all neighbors to the node. \textbf{(Have to write equations to define in and out)}. Simulations of the same 100-nanowire network's activation subject to Mackey-Glass signal with 50 different source-drain pairings (the graphical distance in-between is kept constant) are performed. In-TE averaged across the whole time-series for all nodes in these 50 simulations are plotted in the left panel of Fig.~\ref{fig:TE_combined} with respect to the corresponding closeness centrality. The closeness centrality is calculated at $t = 0\,$s to reflect the structural properties of the network's topology since the weights on all edges are equal. Each data point represent one node (nanowire) in one simulation of the network, with the color representing the average switched ON time of all edges connected to this node. A close-to-linear relationship can be observed on log-log scale, where the dashed red line stands for the best fit \textbf{might need a fitting line}. Nodes at more central positions have the potential to send out and take in more information and exhibit richer dynamics. (\textbf{might have to explain about "richer"}).
 
-Right panel of Fig. \ref{fig:TE_combined} shows the in-TE vs closeness centrality when approaching the WTA path formations in those 50 simulations. A time window of $0.2 \,$s is employed to capture the local information dynamics. The centrality and communicability are measured at the WTA formations. In comparison with the left panel of Fig. \ref{fig:TE_combined}, the centralities at the WTA formations span to a wider range, where the high centrality nodes are the ones connected to junctions that are turned ON. On the other hand, the group at the left of the figure consists of low centrality nodes, whose adjacent junctions are still OFF. \textbf{[Alon - i feel like a sentence is missing explaining this, and connecting to the next sentence]} Within this regime, nodes with higher centralities are more likely to have larger TE. The transition from low TE to high TE with respect to centrality increase validates analysis of the left panel - higher centralities will lead to richer information dynamics.
+Right panel of Fig.~\ref{fig:TE_combined} shows the in-TE vs betweennnes centrality when approaching the WTA path formations in those 50 simulations with the same color code. A time window of $0.2 \,$s is employed to capture the local information dynamics. The centralities are measured exactly at the WTA formations. In comparison with the left panel of Fig.~\ref{fig:TE_combined}, the centralities at the WTA formations span to a wider range, and split to two groups based on $\cNB$. For nodes in the low centrality group (left), TE show a similar close-to-linear relation with $\cNB$ on a log-log scale. In addition, edges connected to higher centrality nodes are typically switched ON earlier. Nodes in the high centrality group (right) normally exhibit higher TE when approaching the WTA formation. Since $\cNB$ is calculated based on the current flow, the big leap in-between is mainly caused by the conductance jump of edges switched ON.
+
+% where the high centrality nodes are the ones connected to junctions that are switched ON. On the other hand, the group at the left of the figure consists of low centrality nodes, whose adjacent junctions are still OFF. \textbf{[Alon - i feel like a sentence is missing explaining this, and connecting to the next sentence]} Within this regime, nodes with higher centralities are more likely to have larger TE. The transition from low TE to high TE with respect to centrality increase validates analysis of the left panel - higher centralities will lead to richer information dynamics.
 
 \textbf{Talk about graph metrics, ON/OFF in INTRO}
 
@@ -159,8 +167,8 @@ Right panel of Fig. \ref{fig:TE_combined} shows the in-TE vs closeness centralit
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.3\linewidth]{figure/time_series}
-	\includegraphics[width=0.6\linewidth]{figure/time_align}
+	\includegraphics[width=0.5\linewidth]{figure/time_series}
+% 	\includegraphics[width=0.6\linewidth]{figure/time_align}
 	\caption{\textbf{Time series data for network measures.} The dashed vertical green line represents the 			time of first current path formation.
 			\newline (a) Collective conductance of network as a function of time. The collective conductance started increasing when the first junction is turned on. The growth will slow down after the first current path is formed.
 			\newline (b) The time derivative of conductance. The derivative is calculated using second order accurate central differences on the collective conductance time series data. The growth regime of conductance shows a great correspondence of $\Delta G$'s spikes.
@@ -168,25 +176,24 @@ Right panel of Fig. \ref{fig:TE_combined} shows the in-TE vs closeness centralit
 			\newline (d) Modularity as a function of time. The weighted modularity of network is calculated by Louvain method(Eq. \ref{eq:mod}) As the network evolves, modularity will first increase as high conductance junctions are spread across the network and having their own communities. With the formation of the first current path, the modularity will have a significant drop since these isolating communities are connected. Then the modularity will keep having such fluctuations with smaller scales as more junctions are turned on and forming new current paths.
 			\textbf{Gaussian -linear inter, KSG - nonlinear, sensitive}}
 	
-	\caption{\textbf{Key events time as functions of first current path formation time.} 
-			The same 100 network is used for 50 simulations with different source-drain pairings. The graphical distances between sources and drains are controlled to be constant. Identical Mackey-Glass signal with random amplitudes ranging between 2-5 V are applied to these simulations. Simulations with higher amplitudes will form current paths earlier. 
-			\newline 
-			X-axis represents the current path formation time in different simulations. Y-axis represents the corresponding time for key events to take place in these simulations. As shown in this figure, key events such as $\Delta G$ maximum, TE spike (in Gaussian estimation) and modularity drop will happen around the first current path formation time. 
-			\newline
-			\textbf{Rephrase here} Thus the network will be optimal for information processing and specific task around the transition phase when the first current path is forming and the network is turning on. }
+% 	\caption{\textbf{Key events time as functions of first current path formation time.} 
+% 			The same 100 network is used for 50 simulations with different source-drain pairings. The graphical distances between sources and drains are controlled to be constant. Identical Mackey-Glass signal with random amplitudes ranging between 2-5 V are applied to these simulations. Simulations with higher amplitudes will form current paths earlier. 
+% 			\newline 
+% 			X-axis represents the current path formation time in different simulations. Y-axis represents the corresponding time for key events to take place in these simulations. As shown in this figure, key events such as $\Delta G$ maximum, TE spike (in Gaussian estimation) and modularity drop will happen around the first current path formation time. 
+% 			\newline
+% 			\textbf{Rephrase here} Thus the network will be optimal for information processing and specific task around the transition phase when the first current path is forming and the network is turning on. }
 	\label{fig:time_series}
 \end{figure}
 
 \paragraph{Network time series.}
 
-\textbf{Need to discuss about how to divide the regimes in a rigorous/ quantitative way.}
-Time series analysis of the network's activation can be even more intriguing. Fig. \ref{fig:time_series}(a) shows the network's collective conductance (\textbf{maybe network conductance}) time-series. The activation of the network mainly have three regimes - the resting (\textbf{maybe another word} ?ground ?low-conductance) regime, the transition regime and the stable (?equilibrium JOEL ?high-conductance) regime. Key events during the activation coincide with each other as a function of time. 
+Time series analysis of the network's activation can be even more intriguing. Fig.~\ref{fig:time_series}(a) shows the network's collective conductance (\textbf{maybe network conductance}) time-series. The activation of the network mainly have three regimes: pre-activation, activation and post-activation. Moreover, key events in the activation regime coincide with each other as a function of tiem.
 
-In the resting regime, all junctions are OFF. Collective conductance of the network remains low. Filament states on junctions start to grow based on their voltage. Increase of conductance will first take place at junctions with higher centralities (voltages). Information flow is high when the signal first applied to the network, but in general at a low level in this regime. The modularity level stays constant since all junctions are at low-conductance state. A peak in modularity will then emerge when several junctions in the network starts to have higher conductances as they are forming "highlands" (\textbf{need proper explanation here}). When more junctions experience conductance increase, modularity starts to drop.
+In the pre-activation regime (shaded red in Fig.~\ref{fig:time_series}), all junctions are OFF. Collective conductance of the network remains low. Filament states on junctions start to grow based on their voltage. Increase of conductance will first take place at junctions with higher centralities (voltages). Information flow is high when the signal first applied to the network, but in general at a low level in this regime. The modularity level stays constant since all junctions are at low-conductance state. A peak in modularity will then emerge when several junctions in the network starts to have higher conductances as they are forming "highlands" (\textbf{need proper explanation here}). When more junctions experience conductance increase, modularity starts to drop.
 
-(Refer to \ref{fig:time_series}) The transition regime starts when the first junctions is turned on (\textbf{Here it's the tunneling model so maybe some other wording. Like some switches are exhibiting higher conductance}). Collective conductance of the network starts to increase significantly as the time derivative will have a spike. (\textbf{Connect spikes to formation of pathways??? Have to check. Not sure if a clear connection exists.}) Modularity of the network reaches the bottom level \textbf{wording here}. With more junctions turned ON, the first current path (winner-takes-all) will be formed and the conductance keeps increasing with a lower path. Modularity starts to increase again as the nodes on the current path stands out from the rest of the network. Information flow will increase to a higher scale (A spike in Gaussian data). 
+As shaded green area in Fig.~\ref{fig:time_series}, the activation regime starts when the first junctions is turned on (\textbf{Here it's the tunneling model so maybe some other wording. Like some switches are exhibiting higher conductance}). Collective conductance of the network starts to increase significantly as the time derivative will have a spike. Modularity of the network reaches the bottom level \textbf{wording here, maybe minimum}. With more junctions turned ON, the first current path (WTA) will be formed and the conductance keeps increasing with a lower path. Modularity starts to increase again as the nodes on the current path stands out from the rest of the network. Information flow will increase to a higher scale (A spike in Gaussian data). 
 
-The transition regime ends when most junctions are at high-conductance states (the rest are not reachable with this specific source-drain pairing). Collective conductance will be stable at a high level. Information flow decreases to a lower scale similar to the resting regime. The modularity remains stable in this regime as well.
+The activation regime ends when most junctions are at high-conductance states (the rest are not reachable with this specific source-drain pairing). Collective conductance will be stable at a high level. Information flow decreases to a lower scale similar to the resting regime. The modularity remains stable in this regime as well.
 
 Snapshots of the network in different phases shown in fig. \ref{fig:network_comparison}. Nodes are colored with the sum of inTE and outTE averaged in the last $0.2\,$s time window. Similarly, junctions are colored by the sum of the TE flows in both direction in the last $0.2\,$s time window. (Kraskov estimator is used here.) At $t= 0.5 \,$s, the whole network is at rest. None of the nodes or junctions are having significant information transfer. When the WTA path is formed at $t = 1.465 \,$s, the central region is having significant information flow. When $t = 2.0 \,$s, the information flow is even stronger as more nodes are having high in and out TEs. Meanwhile, even nodes at peripheral positions are having significant information flow. After the network enters the equilibrium regime ($t = 3 \,$s), the information flows decay as the local TE values are significantly lower than the transition regime.
 
@@ -211,6 +218,7 @@ Snapshots of the network in different phases shown in fig. \ref{fig:network_comp
 	\label{fig:network_comparison}
 \end{figure*}
 
+\textbf{Might not need this paragraph, or move to supplementary.}
 A more thorough validation of the hypothesis is done activating the same network with different source-drain pairings. The graphical distance between source and drain in each repetition is controlled to be constant. Identical Mackey-Glass signals with arbitrary amplitude (\textbf{maybe another word like strength/ xxx parameter}) between $2-5\,$V are delivered to the network. The times when the key events take place are recorded and plotted as fig. \ref{fig:time_series}. \textbf{Wording HERE} With the current path formation time on the x-axis, times for other key events line up fairly well. When the amplitude is larger, the first current path will be formed earlier and similar for other events. With amplitude ? greater than 3.5V, the key events line up linearly. With small amplitudes, the activation takes more time and thus more fluctuations in the dynamics (\textbf{fluctuations in dynamics}) are captured. These fluctuations contributes to the outliers in the plot.
 
 
@@ -234,34 +242,46 @@ A more thorough validation of the hypothesis is done activating the same network
 
 %\subsection*{Pre activation task}
 
-\begin{figure*}[]
+\begin{figure}[]
 	\centering
 	\includegraphics[width=1\linewidth]{figure/benchmark.png}
-	\caption{\textbf{Benchmarks of the network with different initial states.} The network's voltage distribution and junction filament states are extracted every 10 time-step during the activation with a Mackey-Glass signal input. Memory capacity/ non-linear transformation tests are then performed accordingly initiating from those pre-activated states. \\
+	\caption{\textbf{Benchmarks of the network with different initial states.} The network's voltage distribution and junction filament states are extracted every 10 time-step during the activation with a Mackey-Glass signal input. Memory capacity/ non-linear transformation tests are then performed accordingly initiating from those pre-initialized states. \\
 	(a) Memory capacity result with respect to different initial states.\\
 	(b) Non-linear transformation performance with respect to different initial states.\\
 	(c) Average active information storage of memory capacity tests.\\
 	(d) Average transfer entropy of non-linear transformation tests.} 
 	\label{fig:benchmark}
-\end{figure*}
+\end{figure}
 
-\paragraph{Network pre--activation -- memory capacity and learning}
+\paragraph{Network pre-initialization -- memory capacity and learning}
 
 \textbf{Why we care about different initial states?} 
 \textbf{[ZK: do you have learning results without pre-activation?]}
 
 
-To achieve different pre-activation levels, the same 100-nanowire network is activated with Mackey-Glass signal. The states of the network through the activation are extracted every 10 time step ($0.01 \,$s) and employed as initial states for benchmarks tasks. Memory capacity and non-linear transformation are used to test the network's performance at different activation levels (details in method part). 
+To achieve different pre-initialized levels, the same 100-nanowire network is activated with Mackey-Glass signal. The states of the network through the activation are extracted every 10 time step ($0.01 \,$s) and employed as initial states for benchmarks tasks. Memory capacity and non-linear transformation are used to test the network's performance at different activation levels (details in method part). 
 
-Fig. \ref{fig:benchmark} (a) shows the memory capacity of the network with respect to pre-activation length and the average active information storages corresponding to these tests are shown in fig. \ref{fig:benchmark} (c). The tests with pre-activation length between $1-2 \,$ s are showing significantly better performance compared to the rest. These pre-activated states with better performance are exhibiting higher active information storage during the tests as well. Moreover, the pre-activation length of these states coincides with the network's transition regime subject to Mackey-Glass signal, which is indicating that the network is optimal for memory capacity around its activation.
+Fig.~\ref{fig:benchmark} (a) shows the memory capacity of the network with respect to pre-initialization length and the average active information storage corresponding to these tests are shown in Fig.~\ref{fig:benchmark} (c). The tests with pre-initialization length between $1-2 \,$ s are showing significantly better performance compared to the rest. These pre-initialized states with better performance are exhibiting higher active information storage during the tests as well. Moreover, the pre-initialization length of these states coincides with the network's transition regime subject to Mackey-Glass signal, which is indicating that the network is optimal for memory capacity around its activation.
 
-Meanwhile, fig. \ref{fig:benchmark} (b) shows the non-linear transformation (NLT) performance with different pre-activated states. Similar to the results in the MC tests, the states with $1-2 \,$ s of pre-activation perform better than others. However, with $~1.5 \,$s of pre-activation, the performance experience a notable drop, which could be caused by the formation of the first current path. As the network's voltage distribution obtain more linearity when the first current path is forming. But the NLT test requires certainly level of degree of freedom (non-linearity) to achieve better performance. The averaged transfer entropy in NLT tests is shown in fig. \ref{fig:benchmark} (d). The better performing states show correspondence with higher averaged transfer entropy. The result in NLT indicates that the network is also prime for learning around its activation.
+Meanwhile, fig. \ref{fig:benchmark} (b) shows the non-linear transformation (NLT) performance with different pre-initialized states. Similar to the results in the MC tests, the states with $1-2 \,$ s of pre-initialization perform better than others. The averaged transfer entropy in NLT tests is shown in Fig.~\ref{fig:benchmark} (d). The better performing states show correspondence with higher averaged transfer entropy. The result in NLT indicates that the network is also prime for learning around its activation.
 
+% However, with $~1.5 \,$s of pre-initialization, the performance experience a notable drop, which could be caused by the formation of the first current path. As the network's voltage distribution obtain more linearity when the first current path is forming. But the NLT test requires certainly level of degree of freedom (non-linearity) to achieve better performance. 
 
+\paragraph{Computing resources} \textbf{Might move this part to discussion.}
+
+Refer to \textbf{Cramer et al. Criticality paper}. Networks with more computing resources are more likely to perform better in benchmarking tests \textbf{Need reference for computing resource}. In the context of nanowire network, one might presumably consider that denser networks (higher average degree) will have more computing resource. The same MC task \textbf{refer to }is performed on several denser networks with 100 nanowires. 
+
+As shown in Fig.~ \ref{fig:computing_resource}, the general shape of these four curves indicates that networks with more junctions are performing better in the MC task. The performance of dense network (577 junctions) keeps high disregarding the pre-initialization length since it has more than sufficient computing resource. But for the other three curves, the performance is clearly priming between $1-2 \,$s, which is around their activation. The better performance around activation suggests that, with limited computing resource, the performance of the network would be priming around activation (criticality). Or oppositely, to tune a network for better performance, the most efficient way is to drive it around it's critical point.
+
+\begin{figure}
+    \centering
+	\includegraphics[width=0.5\linewidth]{figure/computing_resource.png}
+	\caption{\textbf{Place holder} Computing resource plot}
+	\label{fig:computing_resource}
+\end{figure}
 % According to \textbf{TE equation}, those higher TE tests are exhibiting stronger information dynamics, which is mainly caused by the complexity and uncertainty of voltage distribution.
 
 \clearpage
-
 
 
 
@@ -286,13 +306,13 @@ The Discussion should be succinct and must not contain subheadings.
 \end{figure}
 
 \subsection*{\label{sec:level2} Simulation}
-When connected to external voltage biases, nanowire networks behave like traditional electrical networks. Each component in the network obeys Kirchhoff's law. Hence the voltage distribution across the network can be obtained by solving (\cite{Dorfler2018}):
+Under an applied voltage bias, nanowire networks behave like conventional electrical networks, with each component obeying Kirchhoff's law. Hence, at each instant of time the voltage distribution across the network is obtained by solving \cite{Dorfler2018}
 
 \begin{equation}
-{\cal L}^\dagger V = I,
+{\cal L}^\dagger V = I \qquad ,
 \end{equation}
 
-where $\mathcal{L}^\dagger$ is the expanded graph Laplacian of the network, composed as:
+where $\mathcal{L}^\dagger$ is the expanded graph Laplacian of the network, expressed in block matrix representation as 
 
 \begin{equation}
 	\cal L^\dagger = 
@@ -302,74 +322,70 @@ where $\mathcal{L}^\dagger$ is the expanded graph Laplacian of the network, comp
 	\hline
 	C^T & \mathbb{0}  
 	\end{array}
-	\right],
+	\right] \qquad ,
 \end{equation}
 
-in which $\cal L$ is the graph Laplacian and $C$ represents the nodes (wires) connected to external electrodes. 
+where $\cal L$ is the graph Laplacian and $C$ represents the nodes (wires) connected to external electrodes. The Laplacian is
 
 \begin{equation}
-{\cal L} = D - W.
+{\cal L} = D - W \qquad ,
 \end{equation}
 
-Here $W$ is the weighted adjacency matrix of the network. The weights on edges are determined based on their conductance:
+where $W$ is the weighted adjacency matrix of the network, with edge weights based on conductance,
 \begin{equation}
-	\mathbf W_{ij} = \mathbf A_{ij} G(i,j).
+	\mathbf W_{ij} = \mathbf A_{ij} G(i,j) \qquad ,
 \end{equation}
 
-And $D$ is the weighted degree matrix generated from $W$:
-\begin{align}
-	d_i = \sum \limits_{k=1}^{N} \mathbf W_{i,k},\\
-	\mathbf D = \textbf{diag}(d_i).
-\end{align}
+and where $D$ is the weighted degree matrix generated from $W$:
+\begin{equation}
+		 D = \textbf{diag}(d_i) \qquad , \qquad d_i = \sum \limits_{k=1}^{N} \mathbf W_{i,k} \qquad .
+\end{equation}
+
+\textbf{[ZK: to discuss -- matrix notation]}
 
 
 \subsection*{Centrality}
-Centrality \textbf{Put some reference here} is an important measure that helps understand the fundamental structures and connectivities of networks. Betweenness centrality of nodes and edges in networks can demonstrate .... Meanwhile, closeness centrality of nodes can be used to interpret the ..... \cite{Newman2010}.
+\textbf{[ZK: I would put this first sentence in results. In methods, we can just jump straight into describing what we did.]}Centrality \textbf{Put some reference here} is an important measure that helps understand the fundamental structures and connectivities of networks. Betweenness centrality of nodes and edges in networks can demonstrate .... Meanwhile, closeness centrality of nodes can be used to interpret the ..... \cite{Newman2010}.
 
-A variation of centrality measures based on current flow model proposed by Brandes and Fleischer \cite{Brandes2005} is employed here. As the electrical dynamics in our networks fall in the class of \textbf{random walks} (not sure about here).
-
-The betweenness centrality of a edge in the networks can be determined by:
-
+Here, we use a variation of centrality measures based on current flow proposed by Brandes and Fleischer \cite{Brandes2005}.
+%As the electrical dynamics in our networks fall in the class of \textbf{random walks} (not sure about here).
+The current betweenness centrality of an edge in the network is defined as
 \begin{equation}
-c_{CB}(e) = \frac{\sum \limits_{s \neq t \in V}\tau_{st}(e)}{(n-1)(n-2)},
+c_{CB}(e) = \frac{\sum \limits_{s \neq t \in N}\tau_{st}(e)}{(n-1)(n-2)},
 \label{eq:ebc}
 \end{equation}
-
-
-
-where $\tau_{st}(e)$ is the current flow through edge $e$ between nodes $s$ and $t$, while $n$ stands for number of nodes in the network.
-
-The closeness centrality of a node in this context is structured in the same way as normal closeness centrality, with distance measured based on effective resistance rather than graphical distance. Therefore it is given by:
-
+where $\tau_{st}(e)$ is the current flow through edge $e$ between nodes $s$ and $t$ and $n$ is the number of nodes in the network.
+The current closeness centrality of a node is structured in the same way as the usual closeness centrality, with the distance measure based on effective resistance rather than graphical distance:
 \begin{equation}
-	c_{CC}(v) = \frac{n-1}{\sum \limits_{v \neq w \in V} R(v,w)}.
+	c_{CC}(n) = \frac{n-1}{\sum \limits_{v \neq w \in N} R(v,w)} \qquad ,
 	\label{eq:ecc}
 \end{equation}
-In the context of a unit $st$-current in the network, $R(v,w)$ represents the effective resistance between nodes $v$ and $w$.
+%In the context of a unit $st$-current in the network,
+where $R(v,w)$ is the effective resistance between nodes $v$ and $w$.
 
 \subsection*{Communicability}
+
+\textbf{No communicability results anymore. So might just delete this part.}
 Communicability in a network represents .... \cite{Estrada2008}. 
 
-In this work communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $\mathbf M$ is generated to depict the communicability distribution, where $\mathbf M_{ij}$ represents the communicability between nodes $i$ and $j$. Therefore, $\mathbf M$ reads:
+In this study, communicability is calculated based on the weighted connections \cite{Crofts2009}. A symmetric matrix $\mathbf M$ is generated to depict the communicability distribution, where $\mathbf M_{ij}$ represents the communicability between nodes $i$ and $j$: \textbf{[ZK: to discuss - do we use bf for matrix and normal font for matrix elemeent?]}
 \begin{equation}
 \mathbf M = \exp{(\mathbf D^{-1/2} \mathbf W \mathbf D^{-1/2})}.
 \end{equation} 
-
-The communicability of a node can be defined as how communicable the node is to the rest of the network, which will have the expression as:
-
+The communicability of a node can then be defined as how communicable the node is to the rest of the network:
 \begin{equation}
-	m_i = \sum \limits_{k = 1}^N \mathbf M_{ik}, \qquad k \neq i.
+	m_i = \sum \limits_{j = 1}^N \mathbf M_{ij} \;, \qquad j \neq i \; .
 	\label{eq:ncomm}
 \end{equation}
 
 
 
 \subsection*{Modularity}
-Modularity is a network metric that ..... \textbf{talk about it here} \cite{Rubinov2009}.
+Modularity is a network metric that ..... \textbf{talk about it here -- ZK: move to results} \cite{Rubinov2009}.
 
-Recent studies in neuro-science demonstrated that modularity plays an important role in .... \textbf{talk about it here} \cite{Godwin2015}. 
+Recent studies in neuro-science demonstrated that modularity plays an important role in .... \textbf{talk about it here -- ZK: move to results} \cite{Godwin2015}. 
  
-Modularity ($\mathbf Q^w$) in a weighted network can be calculated by the Louvain method \cite{Blondel2008}:
+Modularity in a weighted network can be calculated by the Louvain method \cite{Blondel2008}:
  
 % \begin{equation}
 % Q^w = \frac{1}{I^w} \sum \limits_{i,j} \left[W_{ij} - \frac{k_i^w k_j^w}{I^w} \right] \delta(m_i, m_j),
@@ -378,8 +394,8 @@ Modularity ($\mathbf Q^w$) in a weighted network can be calculated by the Louvai
 \mathbf Q^w = \frac{1}{\mathbf D} \sum \limits_{i,j} \left[\mathbf W_{ij} - \frac{d_i d_j}{\mathbf D} \right] \delta(m_i, m_j),
 \label{eq:mod}
 \end{equation}
-
-in which $w_{i,j}$ is the weight of the edge between nodes $i$ and $j$, $I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$, $m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
+where $W_{ij}$ is the weight of the edge between nodes $i$ and $j$, %$I^w$ represents sum of all weights in the network, $k_i^w$ stands for the weighted degree of node $i$,
+$m_i$ is the community where node $i$ is located, and $\delta$ is the Kronecker delta function.
 
 \subsection*{Information Dynamics}
 
@@ -418,27 +434,33 @@ The active information storage in context of edge voltage distribution is thus c
 
 .....
 
-\subsection*{Benchmark}
+\subsection*{Benchmarkmarking Tasks}
 
-Regular reservoir computing realizations are typically initialized with homogeneous or randomly generated states. The system then evolves based on specific tasks. \textbf{WHY we want different initial states?}
+%In reservoir computing applications, networks are typically initialized with homogeneous or randomly generated edge states. The system then evolves according to specific tasks. \textbf{WHY we want different initial states?}
 
 
-A nanowire network enters different stages during its activation. Its states at different stages typically have different voltage distribution, unevenly grew filament states and therefore diverse conductance levels. 
-In this section the network's states at different activation stages are extracted and used as initial states for benchmarking. Starting from these pre-activated states, memory capacity of the network is measured to estimate the network's ability of reconstructing its short-term memory \textbf{(Cite Jaeger)}. Non-linear transformation is used to test the network's learning ability \textbf{(Cite UCLA)}.
+A nanowire network evolves through different global states before, during and after activation. At the local junction level, these states are characterized by dynamically changing conductance levels due to continuous voltage redistribution and unevenly growing filament states. To investigate the information processing performance of different global states, two benchmark reservoir computing tasks were implemented on the network. After activating the network with the Mackey-Glass signal, the states at different time points before, during and after activation were extracted and used as initial states for the two benchmarking tasks: memory capacity and non-linear transformation. 
 
-A randomly generated time series from uniform distribution in the interval $[-2,2]$ is used as the input signal for memory capacity test. A linear combination of the network's state at $t$ (node voltage) is applied to reconstruct the previous input at $t - k$. $k = 1 ... 100$ are used to investigate different delayed intervals. The $k-$delay memory capacity is defined as:
+Memory capacity (MC) is a measure of the network's ability to recall information from its fading memory property \textbf{(Cite Jaeger)}. 
+A randomly generated time series from uniform distribution in the interval $[-2,2]$ is used as the input signal. A linear combination of the network's state (node voltage) at $t$ is applied to reconstruct the previous input at $t - k$. Using $k = 1 ... 100$ to include different delayed intervals, MC is defined as
+%The $k-$delay memory capacity is defined as:
 \begin{equation}
-	\text{MC}_k = \dfrac{\text{cov}^2(\mathbf u_{t-k}, \mathbf o_t)}{\sigma^2 (\mathbf u_{t-k}) \sigma^2 (\mathbf o_t)}.
+	\text{MC} = \sum \limits_{k=1}^\infty \text{MC}_k
+	\; , \mbox{with} \; 
+	\text{MC}_k = \dfrac{\text{cov}^2(\mathbf u_{t-k}, \mathbf o_t)}{\sigma^2 (\mathbf u_{t-k}) \sigma^2 (\mathbf o_t)} \; .
 \end{equation}
-The generic memory capacity for the network can thus be calculated as:
-\begin{equation}
-	\text{MC} = \sum \limits_{k=1}^\infty \text{MC}_k.
-\end{equation}
+where ....
+% The generic memory capacity for the network can thus be calculated as:
+% \begin{equation}
+% 	\text{MC} = \sum \limits_{k=1}^\infty \text{MC}_k.
+% \end{equation}
 
-The non-linear transformation task makes use of sinusoidal wave as the input signal and try to transfer the signal to other periodic signals in the shape of square or sawtooth. Similar to memory capacity test, linear combinations of the network's states are done to fit the target signal. The accuracy is calculated by $1 - \text{RNMSE}$:
+Non-linear transformation tests the network's learning ability \textbf{(Cite UCLA)}.
+An input sinusoidal wave is transformed by the network into either a square or sawtooth waveform. Similar to the MC test, linear combinations of the network's states are used to fit the target signal. The accuracy is calculated as $1 - \text{RNMSE}$, where
 \begin{equation}
 	\text{RNMSE} = \sqrt{\dfrac{\sum (\mathbf Y - \mathbf O)^2}{\sum \mathbf O^2}}.
 \end{equation}
+and where $Y$ is the fitting results while $O$ represents the target signal.
 
 \bibliography{paper1}\label{paper1}
 
